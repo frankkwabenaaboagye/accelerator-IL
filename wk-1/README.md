@@ -29,25 +29,24 @@
 - Create a class with an inner class to encapsulate helper functionality or data related to the outer class.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
-...
 
 3. #### Create a Generic Method for Data Validation
 - Implement a generic method that can validate different data types (e.g., numbers, strings) based on specific criteria.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-...
+
 
 4. #### Design a Generic Class for Stack Data Structure
 - Create a generic Stack class that can hold objects of any data type, utilizing generics for type safety.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-...
 
 5. #### Implement a Thread-Safe Cache using ConcurrentHashMap
 - Design a simple in-memory cache using ConcurrentHashMap to store key-value pairs with thread safety considerations.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-...
 
 6. #### Process a Collection using Stream API and Custom Comparator
-- 
+- Choose a collection of data (e.g., list of objects).
+- Implement a custom comparator to sort the collection based on specific criteria.
+- Utilize the Stream API to filter, transform, and process elements within the sorted collection.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 ...
 
