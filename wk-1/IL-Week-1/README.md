@@ -92,7 +92,7 @@ The inner class Engine provides functionality closely tied to the outer class Ro
     - `isEmpty()`: Checks if the stack is empty.
     - `size()`: Returns the number of elements in the stack.
 
-- [Solution - ./src/main/java/frank/generics_in_depth/lab5/](./src/main/java/frank/generics_in_depth/lab5/)
+- [Solution - ./src/main/java/frank/generics_in_depth/lab4/](./src/main/java/frank/generics_in_depth/lab4/)
 
 ## Implement a Thread-Safe Cache using ConcurrentHashMap
 - `PhonebookCache Interface`: I defined the  operations such as adding, updating, removing, and retrieving contacts.
@@ -106,6 +106,8 @@ The inner class Engine provides functionality closely tied to the outer class Ro
 | ![Image 1](./src/main/java/frank/generics_in_depth/lab5/hashMap.JPG) | ![Image 2](./src/main/java/frank/generics_in_depth/lab5/concurrentHashMap.JPG) |
 | Was not able to update the contact witht the `hashMap` | Update happened because of the `concurrent hash map` |
 
+
+- - [Solution - ./src/main/java/frank/generics_in_depth/lab4/](./src/main/java/frank/generics_in_depth/lab5)
 
 
 ## Process a Collection using Stream API and Custom Comparator
