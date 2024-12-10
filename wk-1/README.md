@@ -17,6 +17,8 @@
 1. #### Implement a Design Pattern
 - Choose a design pattern like Factory Method or Strategy.
 - Design a real-world scenario applicable to the chosen pattern and implement it in Java using classes and methods.
+- Solution  
+   - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 2. #### Leverage Inner Classes for Data Encapsulation
 ...
