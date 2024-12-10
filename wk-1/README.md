@@ -21,6 +21,8 @@
    - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 2. #### Leverage Inner Classes for Data Encapsulation
+- Create a class with an inner class to encapsulate helper functionality or data related to the outer class.
+
 ...
 
 3. #### Create a Generic Method for Data Validation
