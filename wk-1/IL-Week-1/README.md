@@ -25,3 +25,7 @@
       - may define an interface that lets `strategy` access its data
 
 - [](./src/main/java/frank/labone/)
+    - `CapTextFormatter`, is a concrete text formatter that implements the TextFormatter interface and the class is used to change the text into capital case
+    - The `LowerTextFormatter` is a concrete text formatter that implements the TextFormatter interface and the class is
+used to change the text into small case.
+    - `TextEditor` class holds a reference to the `TextFormatter` interface
