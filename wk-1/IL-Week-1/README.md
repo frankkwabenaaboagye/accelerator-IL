@@ -1,8 +1,9 @@
 # Solutions
-- [Lab One](#lab-one)
-- [Lab Two](#lab-two)
+- [Implement a Design Pattern](#implement-a-design-pattern)
+- [Leverage Inner Classes for Data Encapsulation](#leverage-inner-classes-for-data-encapsulation)
+- [Create a Generic Method for Data Validation](#create-a-generic-method-for-data-validation)
 
-## Lab One
+## Implement a Design Pattern
 - creating a text formatter for a text editor
 - a text editor can have different text formatters
 - so we will have a bunch of text formatters and pass the required one
@@ -27,7 +28,7 @@
       - maintains a reference to the `strategy` object
       - may define an interface that lets `strategy` access its data
 
-- [](./src/main/java/frank/labone/)
+- [Solution - ./src/main/java/frank/oop_deep_dive/labone](./src/main/java/frank/oop_deep_dive/labone)
     - `CapTextFormatter`, is a concrete text formatter that implements the TextFormatter interface and the class is used to change the text into capital case
     - The `LowerTextFormatter` is a concrete text formatter that implements the TextFormatter interface and the class is
 used to change the text into small case.
@@ -38,8 +39,7 @@ used to change the text into small case.
 
 
 
-
-## Lab Two
+## Leverage Inner Classes for Data Encapsulation
 - Outer Class: `Rocket` 🚀
 - Attributes:
     - `name`: The name of the rocket.
@@ -56,3 +56,48 @@ used to change the text into small case.
         - `displayEngineDetails()`: Prints the engine's details, including the thrust-to-weight ratio.
 
 The inner class Engine provides functionality closely tied to the outer class Rocket, such as calculating the thrust-to-weight ratio using the rocket's weight.
+
+- [Solutions - ./src/main/java/frank/oop_deep_dive/labtwo](./src/main/java/frank/oop_deep_dive/labtwo)
+
+
+
+## Create a Generic Method for Data Validation
+-  what i did was a Baking Validation Utility
+- Generic Validation: Supports validation for different types of data (Integer, String, Double, etc.).
+- Modularity: I placed each validation logic in a separate class, improving code clarity.
+- Extensibility: New validation criteria can be added easily by implementing the `BakingValidator<T>` interface.
+- Structure
+    - Interface
+        - `BakingValidator<T>`: A generic interface for defining validation criteria.
+    - Validators
+        - `TemperatureValidator`: Validates if a temperature is within the baking range (150–250°C).
+        - `IngredientNameValidator`: Validates that ingredient names are non-empty and not too long (max 30 characters).
+    - `WeightValidator`: Validates if an ingredient's weight is within 0–1000 grams.
+
+- [Solution - ./src/main/java/frank/generics_in_depth/lab3](./src/main/java/frank/generics_in_depth/lab3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

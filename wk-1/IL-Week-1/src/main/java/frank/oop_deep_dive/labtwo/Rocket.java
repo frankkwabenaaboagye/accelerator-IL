@@ -1,4 +1,4 @@
-package frank.labtwo;
+package frank.oop_deep_dive.labtwo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

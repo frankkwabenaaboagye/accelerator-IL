@@ -1,4 +1,4 @@
-package frank.labone;
+package frank.oop_deep_dive.labone;
 
 public interface TextFormatter {
 

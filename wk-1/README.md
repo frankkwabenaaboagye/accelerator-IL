@@ -1,3 +1,6 @@
+## Solution
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
 ## Exercises
 * Advanced Java Features (Object-Oriented Programming, Generics, Collections Framework)
 
@@ -14,11 +17,12 @@
 * Advanced Algorithms: Greedy Algorithms and Dynamic Programming
 
 ---
+
+### Advanced Java Features (Object-Oriented Programming, Generics, Collections Framework)
+
 1. #### Implement a Design Pattern
 - Choose a design pattern like Factory Method or Strategy.
 - Design a real-world scenario applicable to the chosen pattern and implement it in Java using classes and methods.
-- Solution  
-   - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 2. #### Leverage Inner Classes for Data Encapsulation
 - Create a class with an inner class to encapsulate helper functionality or data related to the outer class.
@@ -26,6 +30,7 @@
 ...
 
 3. #### Create a Generic Method for Data Validation
+- Implement a generic method that can validate different data types (e.g., numbers, strings) based on specific criteria.
 ...
 
 4. #### Design a Generic Class for Stack Data Structure

@@ -1,4 +1,4 @@
-package frank.labtwo;
+package frank.oop_deep_dive.labtwo;
 
 public class TestInnerClass {
     public static void main(String[] args) {
