@@ -2,6 +2,10 @@
 - [Implement a Design Pattern](#implement-a-design-pattern)
 - [Leverage Inner Classes for Data Encapsulation](#leverage-inner-classes-for-data-encapsulation)
 - [Create a Generic Method for Data Validation](#create-a-generic-method-for-data-validation)
+- [Design a Generic Class for Stack Data Structure](#design-a-generic-class-for-stack-data-structure)
+- [Implement a Thread-Safe Cache using ConcurrentHashMap](#implement-a-thread-safe-cache-using-concurrenthashmap)
+- [Process a Collection using Stream API and Custom Comparator](#process-a-collection-using-stream-api-and-custom-comparator)
+---
 
 ## Implement a Design Pattern
 - creating a text formatter for a text editor
@@ -77,8 +81,23 @@ The inner class Engine provides functionality closely tied to the outer class Ro
 - [Solution - ./src/main/java/frank/generics_in_depth/lab3](./src/main/java/frank/generics_in_depth/lab3)
 
 
+## Design a Generic Class for Stack Data Structure
+- The class MyStack<T> uses a type parameter T, which allows the stack to hold any data type (like Integer, String, etc.).
+- It uses an array (`Object[]` stack) to store elements. The array resizes when it reaches capacity.
+- When the stack is full, it doubles the array size to accommodate more elements
+- operations
+    - `push(T item)`: Adds an element to the top of the stack.
+    - `pop()`: Removes and returns the top element.
+    - `peek()`: Returns the top element without removing it.
+    - `isEmpty()`: Checks if the stack is empty.
+    - `size()`: Returns the number of elements in the stack.
+
+- [Solution ](./src/main/java/frank/generics_in_depth/lab4/)
+
+## Implement a Thread-Safe Cache using ConcurrentHashMap
 
 
+## Process a Collection using Stream API and Custom Comparator
 
 
 
