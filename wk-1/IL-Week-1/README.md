@@ -92,7 +92,7 @@ The inner class Engine provides functionality closely tied to the outer class Ro
     - `isEmpty()`: Checks if the stack is empty.
     - `size()`: Returns the number of elements in the stack.
 
-- [Solution ](./src/main/java/frank/generics_in_depth/lab4/)
+- [Solution - ./src/main/java/frank/generics_in_depth/lab5/](./src/main/java/frank/generics_in_depth/lab5/)
 
 ## Implement a Thread-Safe Cache using ConcurrentHashMap
 - `PhonebookCache Interface`: I defined the  operations such as adding, updating, removing, and retrieving contacts.
