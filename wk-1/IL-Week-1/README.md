@@ -95,6 +95,17 @@ The inner class Engine provides functionality closely tied to the outer class Ro
 - [Solution ](./src/main/java/frank/generics_in_depth/lab4/)
 
 ## Implement a Thread-Safe Cache using ConcurrentHashMap
+- `PhonebookCache Interface`: I defined the  operations such as adding, updating, removing, and retrieving contacts.
+- `HashMapPhonebookCache`: Uses HashMap for non-thread-safe operations.
+- `ConcurrentHashMapPhonebookCache`: Uses ConcurrentHashMap for thread-safe operations.
+- `File Persistence`: Contact information is written to a file (phonebook.txt) after each modification to observe the effects of concurrent modifications.
+- `Multithreading`: Simulates concurrent access using multiple threads to add, update, and remove contacts.
+
+| **Image 1**                     | **Image 2**                     |
+|----------------------------------|----------------------------------|
+| ![Image 1](./src/main/java/frank/generics_in_depth/lab5/hashMap.JPG) | ![Image 2](./src/main/java/frank/generics_in_depth/lab5/concurrentHashMap.JPG) |
+| Was not able to update the contact witht the `hashMap` | Update happened because of the `concurrent hash map` |
+
 
 
 ## Process a Collection using Stream API and Custom Comparator

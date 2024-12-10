@@ -42,7 +42,7 @@
 ...
 
 5. #### Implement a Thread-Safe Cache using ConcurrentHashMap
-- 
+- Design a simple in-memory cache using ConcurrentHashMap to store key-value pairs with thread safety considerations.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 ...
 
