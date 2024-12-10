@@ -107,13 +107,19 @@ The inner class Engine provides functionality closely tied to the outer class Ro
 | Was not able to update the contact witht the `hashMap` | Update happened because of the `concurrent hash map` |
 
 
-- - [Solution - ./src/main/java/frank/generics_in_depth/lab4/](./src/main/java/frank/generics_in_depth/lab5)
+- [Solution - ./src/main/java/frank/generics_in_depth/lab5/](./src/main/java/frank/generics_in_depth/lab5)
 
 
 ## Process a Collection using Stream API and Custom Comparator
-
-
-
+- `Collection of Candidates`
+    - The data consists of a list of candidates running for the election, with their respective details such as name, age, party, and number of votes received.
+- `Custom Comparator`
+    - A custom comparator is used to sort the candidates first by the number of votes received (in descending order) and then by age (in ascending order) when votes are the same.
+- `Stream API Operations`
+    - `Filter`: Only candidates aged 55 and above are retained.
+    - `Transform`: The candidates' information is transformed into a readable string format displaying their name, party, and votes received.
+    - `Process`: The total number of votes from the filtered candidates is calculated.
+- [Solution - ./src/main/java/frank/generics_in_depth/lab6](./src/main/java/frank/generics_in_depth/lab6)
 
 
 
