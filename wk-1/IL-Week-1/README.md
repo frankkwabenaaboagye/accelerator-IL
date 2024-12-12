@@ -8,7 +8,10 @@
 
 ---
 
-- [Handling Checked and Unchecked Exceptions]()
+- [Handling Checked and Unchecked Exceptions](#handling-checked-and-unchecked-exceptions)
+- [Utilizing Nested Try-Catch Blocks](#utilizing-nested-try-catch-blocks)
+- [Releasing Resources with finally Block](#releasing-resources-with-finally-block)
+- [Creating a Custom Exception](#creating-a-custom-exception)
 
 
 
