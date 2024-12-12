@@ -51,7 +51,6 @@
 - Implement a custom comparator to sort the collection based on specific criteria.
 - Utilize the Stream API to filter, transform, and process elements within the sorted collection.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-...
 
 ---
 
@@ -60,6 +59,7 @@
 1. #### Handling Checked and Unchecked Exceptions
 - Create methods that throw both checked and unchecked exceptions.
 - Implement try-catch blocks to handle these exceptions appropriately, demonstrating the difference in handling requirements.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 2. #### Utilizing Nested Try-Catch Blocks
 - Simulate a scenario where you might need to handle multiple exceptions within nested code blocks.
@@ -67,8 +67,17 @@
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 3. #### Releasing Resources with finally Block
+- Create a method that opens a file for reading.
+- Use a try-catch block to handle potential IOException while reading the file.
+- Ensure the file is closed using a finally block, regardless of exceptions.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 4. #### Creating a Custom Exception
+- Design a scenario where a custom exception would be beneficial for your application.
+- Create a custom exception class extending an appropriate base class (e.g., `RuntimeException`).
+- Throw your custom exception within your code and handle it using a try-catch block.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
 
 ---
 

@@ -199,6 +199,13 @@ John Smith,54321
 
 
 ## Releasing Resources with finally Block
+- Here, I created a program that demonstrates how to open and display an animated GIF while ensuring proper resource management.
+- The program will open a window displaying the animated GIF! 🎬
+- 🛠️ Features:
+    - **Releasing Resources**: The `finally` block ensures that the file input stream is closed properly, even if an exception occurs, preventing resource leaks. 🧹
+
+- ![Sample GIF](./frank.gif)
+
 
 ## Creating a Custom Exception
 
