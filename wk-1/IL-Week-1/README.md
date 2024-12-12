@@ -159,9 +159,44 @@ John Smith,54321
 | **Unchecked Exception** | `NumberFormatException`         | Thrown internally within `IllegalArgumentException` when parsing a non-numeric vote count.                                                              |
 | **Unchecked Exception** | `IllegalArgumentException`      | Thrown when attempting to determine a winner but the results are empty or invalid (e.g., no data in the map).                                           |
 
+- [Solution - ./src/main/java/frank/exceptionhandlinginjava/ex1_checkandunchecked/GhanaElectionProcessor.java ](./src/main/java/frank/exceptionhandlinginjava/ex1_checkandunchecked/GhanaElectionProcessor.java)
+
 ---
 
 ## Utilizing Nested Try-Catch Blocks
+
+- I demonstrate the use of nested try-catch blocks to handle different levels of exceptions in a simulated airplane control system.
+
+- Layout Diagram
+
+```text
++-------------------------------------------+
+| Main Control System (Outer Try Block)     |
+|  - Handles overall system failures        |
+|                                           |
+|   +-----------------------------------+   |
+|   | Navigation Subsystem (Inner Try)  |   |
+|   |  - Manages navigation operations  |   |
+|   |                                   |   |
+|   |   +---------------------------+   |   |
+|   |   | Sensor Data Fetch (Try)  |   |   |
+|   |   |  - Handles sensor errors |   |   |
+|   |   +---------------------------+   |   |
+|   +-----------------------------------+   |
++-------------------------------------------+
+
+```
+
+- Exception Handling Table
+
+| Level                     | Responsible Block        | Exception Type                | Handling Mechanism                                     |
+|---------------------------|--------------------------|-------------------------------|------------------------------------------------------|
+| Main Control System       | Outer Try-Catch Block    | `NullPointerException`        | Activates emergency protocols                        |
+| Navigation Subsystem      | Inner Try-Catch Block    | `IllegalArgumentException`    | Switches to manual navigation mode                  |
+| Sensor Data Fetch         | Innermost Try-Catch Block| `ArithmeticException`         | Uses redundant sensor data                           |
+
+- [Solution - ./src/main/java/frank/exceptionhandlinginjava/ex2_nestedtrycatch/AirplaneSimulation.java ](./src/main/java/frank/exceptionhandlinginjava/ex2_nestedtrycatch/AirplaneSimulation.java)
+
 
 ## Releasing Resources with finally Block
 

@@ -62,6 +62,9 @@
 - Implement try-catch blocks to handle these exceptions appropriately, demonstrating the difference in handling requirements.
 
 2. #### Utilizing Nested Try-Catch Blocks
+- Simulate a scenario where you might need to handle multiple exceptions within nested code blocks.
+- Implement nested try-catch blocks to catch specific exceptions at different levels of your code.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 3. #### Releasing Resources with finally Block
 
