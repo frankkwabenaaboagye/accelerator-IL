@@ -209,8 +209,15 @@ John Smith,54321
 
 - ![Sample GIF](./frank.gif)
 
+- [Solution - ./src/main/java/frank/exceptionhandlinginjava/ex3_releaseingresources/GifDisplay.java](./src/main/java/frank/exceptionhandlinginjava/ex3_releaseingresources/GifDisplay.java)
+
 
 ## Creating a Custom Exception
+- The application uses Java Swing for the GUI, and a custom exception is implemented to handle invalid input scenarios (like an empty name).
+- Custom Exception
+    - The `FrankCustomException` is a custom runtime exception used to indicate that the user has entered an invalid name (in this case, an empty string). It extends the `RuntimeException` class and is thrown when the input field is empty.
+
+- [Solution - ./src/main/java/frank/exceptionhandlinginjava/ex4_customexception/](./src/main/java/frank/exceptionhandlinginjava/ex4_customexception/)
 
 ---
 
