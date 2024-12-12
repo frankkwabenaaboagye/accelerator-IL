@@ -13,7 +13,11 @@
 
 * [Exception Handling in Java: Advanced Concepts](#exception-handling-in-java-advanced-concepts)
 
-   - 
+   - [#1: Handling Checked and Unchecked Exceptions](#handling-checked-and-unchecked-exceptions)
+   - [#2: Utilizing Nested Try-Catch Blocks](#utilizing-nested-try-catch-blocks)
+   - [#3: Releasing Resources with finally Block](#releasing-resources-with-finally-block)
+   - [#4: Creating a Custom Exception](#creating-a-custom-exception)
+
 
 * Java Concurrency (Multithreading) - Advanced Concepts
 * Advanced Data Structures (Trees & Graphs)
