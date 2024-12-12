@@ -5,6 +5,16 @@
 - [Design a Generic Class for Stack Data Structure](#design-a-generic-class-for-stack-data-structure)
 - [Implement a Thread-Safe Cache using ConcurrentHashMap](#implement-a-thread-safe-cache-using-concurrenthashmap)
 - [Process a Collection using Stream API and Custom Comparator](#process-a-collection-using-stream-api-and-custom-comparator)
+
+---
+
+- [Handling Checked and Unchecked Exceptions]()
+
+
+
+
+---
+---
 ---
 
 ## Implement a Design Pattern
@@ -121,9 +131,43 @@ The inner class Engine provides functionality closely tied to the outer class Ro
     - `Process`: The total number of votes from the filtered candidates is calculated.
 - [Solution - ./src/main/java/frank/generics_in_depth/lab6](./src/main/java/frank/generics_in_depth/lab6)
 
+---
 
+## Handling Checked and Unchecked Exceptions
+- Created a `Ghana Election Result Processor` class
+- processes Ghana's election results from a CSV file, declaring Frank Aboagye as the independent candidate winner! 🎉\
+- 🚀 Features
+    - Reads election results from a CSV file.
+    - Handles:
+        - `Checked Exceptions`: Ensures safe file handling.
+        - `Unchecked Exceptions`: Validates data correctness.
+    - Outputs the election winner.
+```csv
+# example CSV Data
+candidate,votes
+Frank Aboagye,102345
+Jane Doe,98765
+John Smith,54321
+```
 
+- Exception Types and Names
 
+| **Type**              | **Exception Name**               | **Description**                                                                                                                                         |
+|-----------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Checked Exception** | `IOException`                   | Thrown if there is an error while reading the election results file (e.g., file not found or cannot be opened).                                         |
+| **Unchecked Exception** | `IllegalArgumentException`      | Thrown if the file contains malformed data (e.g., invalid CSV structure or non-numeric vote count).                                                     |
+| **Unchecked Exception** | `NumberFormatException`         | Thrown internally within `IllegalArgumentException` when parsing a non-numeric vote count.                                                              |
+| **Unchecked Exception** | `IllegalArgumentException`      | Thrown when attempting to determine a winner but the results are empty or invalid (e.g., no data in the map).                                           |
+
+---
+
+## Utilizing Nested Try-Catch Blocks
+
+## Releasing Resources with finally Block
+
+## Creating a Custom Exception
+
+---
 
 
 

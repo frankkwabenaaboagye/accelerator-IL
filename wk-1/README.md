@@ -2,7 +2,7 @@
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 ## Exercises
-* Advanced Java Features (Object-Oriented Programming, Generics, Collections Framework)
+* [Advanced Java Features (Object-Oriented Programming, Generics, Collections Framework)](#advanced-java-features-object-oriented-programming-generics-collections-framework)
 
    - [#1: Implement a Design Pattern](#implement-a-design-pattern)
    - [#2: Leverage Inner Classes for Data Encapsulation](#leverage-inner-classes-for-data-encapsulation)
@@ -11,7 +11,10 @@
    - [#5: Implement a Thread-Safe Cache using ConcurrentHashMap](#implement-a-thread-safe-cache-using-concurrenthashmap)
    - [#6:  Process a Collection using Stream API and Custom Comparator](#process-a-collection-using-stream-api-and-custom-comparator)
 
-* Exception Handling in Java: Advanced Concepts
+* [Exception Handling in Java: Advanced Concepts](#exception-handling-in-java-advanced-concepts)
+
+   - 
+
 * Java Concurrency (Multithreading) - Advanced Concepts
 * Advanced Data Structures (Trees & Graphs)
 * Advanced Algorithms: Greedy Algorithms and Dynamic Programming
@@ -52,4 +55,27 @@
 
 ---
 
+### Exception Handling in Java: Advanced Concepts
+
+1. #### Handling Checked and Unchecked Exceptions
+- Create methods that throw both checked and unchecked exceptions.
+- Implement try-catch blocks to handle these exceptions appropriately, demonstrating the difference in handling requirements.
+
+2. #### Utilizing Nested Try-Catch Blocks
+
+3. #### Releasing Resources with finally Block
+
+4. #### Creating a Custom Exception
+
+---
+
+### Java Concurrency (Multithreading) - Advanced Concepts
+
+---
+
+### Advanced Data Structures (Trees & Graphs)
+
+---
+
+### Advanced Algorithms: Greedy Algorithms and Dynamic Programming
 
