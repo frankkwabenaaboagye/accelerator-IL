@@ -360,12 +360,17 @@ John Smith,54321
 ##  Calculate Minimum Spanning Tree with Prim's Algorithm
 - [./src/main/java/frank/advanceDS/MST/](./src/main/java/frank/advanceDS/MST/)
 
-##
+## Implement a Greedy Algorithm for the Fractional Knapsack Problem
+- `Item` Class: value and a weight.
+    - I calculate the value-to-weight ratio using the `getValuePerWeight` method.
+- items are sorted in descending order based on their value-to-weight ratio. 
+- `Greedy Selection`: The algorithm iterates over the sorted list of items, adding full items to the knapsack if possible. 
+    - If an item can't fit completely, the algorithm adds the fractional part of the item that fits.
+    - The `getMaxValue` method returns the maximum value that can be carried in the knapsack given the capacity.
+- [Solution - ](./src/main/java/frank/advanceDS/advancealgorithms/greedy/)
 
-##
-
-
-
+## Solve the Longest Common Subsequence (LCS) Problem using Dynamic Programming
+- [./src/main/java/frank/advanceDS/advancealgorithms/lcs/LCS.java](./src/main/java/frank/advanceDS/advancealgorithms/lcs/LCS.java)
 
 
 
