@@ -23,7 +23,8 @@
 - [Find the Shortest Path with Dijkstra's Algorithm](#find-the-shortest-path-with-dijkstras-algorithm)
 - [Calculate Minimum Spanning Tree with Prim's Algorithm](#calculate-minimum-spanning-tree-with-prims-algorithm)
 ---
-- [] 
+- [Implement a Greedy Algorithm for the Fractional Knapsack Problem](#implement-a-greedy-algorithm-for-the-fractional-knapsack-problem)
+- [Solve the Longest Common Subsequence (LCS) Problem using Dynamic Programming](#solve-the-longest-common-subsequence-lcs-problem-using-dynamic-programming)
 
 ---
 ---
