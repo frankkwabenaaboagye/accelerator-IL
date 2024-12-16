@@ -96,6 +96,8 @@
 - Implement a synchronized block to ensure thread safety when updating the counter variable.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 3. #### Deadlock Example and Prevention
+- Simulate a deadlock scenario involving two threads and two resources.
+- Analyze the deadlock and modify your code to avoid it using proper lock ordering.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
 
 
