@@ -19,10 +19,26 @@
    - [#4: Creating a Custom Exception](#creating-a-custom-exception)
 
 
-* Java Concurrency (Multithreading) - Advanced Concepts
+* [Java Concurrency (Multithreading) - Advanced Concepts](#java-concurrency-multithreading---advanced-concepts)
 
-* Advanced Data Structures (Trees & Graphs)
-* Advanced Algorithms: Greedy Algorithms and Dynamic Programming
+   - [#1: Implement a Thread Pool for Image Processing](#implement-a-thread-pool-for-image-processing)
+   - [#2: Synchronized Block for Updating a Shared Counter](#synchronized-block-for-updating-a-shared-counter)
+   - [#3: Deadlock Example and Prevention](#deadlock-example-and-prevention)
+
+
+* [Advanced Data Structures (Trees & Graphs)](#advanced-data-structures-trees--graphs)
+
+   - [#1: Implement a Balanced Binary Search Tree (AVL Tree)](#implement-a-balanced-binary-search-tree-avl-tree)
+   - [#2: Utilize a Heap for Task Scheduling](#utilize-a-heap-for-task-scheduling)
+   - [#3: Build a Trie for Autocomplete Functionality](#build-a-trie-for-autocomplete-functionality)
+   - [#4: Implement Depth-First Search (DFS) on a Graph](#implement-depth-first-search-dfs-on-a-graph)
+
+
+* [Advanced Algorithms: Greedy Algorithms and Dynamic Programming](#advanced-algorithms-greedy-algorithms-and-dynamic-programming)
+
+   - [#1: Implement a Greedy Algorithm for the Fractional Knapsack Problem](#implement-a-greedy-algorithm-for-the-fractional-knapsack-problem)
+   - [#2: Solve the Longest Common Subsequence (LCS) Problem using Dynamic Programming](#solve-the-longest-common-subsequence-lcs-problem-using-dynamic-programming)
+
 
 ---
 
@@ -112,28 +128,32 @@
 - Simulate a task scheduling scenario where tasks have priorities.
 - Implement a Min Heap (priority queue) to efficiently schedule tasks based on their priority.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-
 3. #### Build a Trie for Autocomplete Functionality
 - Design a Trie data structure to store a set of words.
 - Implement methods to search for prefixes and retrieve words that start with a given prefix.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-
 4. ####  Implement Depth-First Search (DFS) on a Graph
 - Represent a graph using an adjacency list or adjacency matrix.
 - Implement a DFS algorithm to traverse all nodes in the graph, exploring connected nodes recursively.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-
 5. ####  Find the Shortest Path with Dijkstra's Algorithm
 - Design a scenario with a weighted graph representing a road network.
 - Implement Dijkstra's algorithm to find the shortest path between two nodes in the graph based on edge weights (distances).
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-
 6. ####  Calculate Minimum Spanning Tree with Prim's Algorithm
-
+- Create a weighted graph representing connections between cities.
+- Implement Prim's algorithm to find the minimum spanning tree that connects all cities with minimal total connection cost.
 - [./IL-Week-1/README.md](./IL-Week-1/README.md)
-
 
 ---
 
 ### Advanced Algorithms: Greedy Algorithms and Dynamic Programming
-
+1. #### Implement a Greedy Algorithm for the Fractional Knapsack Problem
+- Design a solution for the fractional knapsack problem, where you can take portions of items.
+- Implement a greedy algorithm that prioritizes items with the highest value-to-weight ratio to 
+   - fill the knapsack as much as possible while staying within the weight limit.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+2. #### Solve the Longest Common Subsequence (LCS) Problem using Dynamic Programming
+- Create a dynamic programming solution for finding the LCS of two given strings.
+- Utilize a table to store solutions to subproblems (overlapping subsequences) and efficiently construct the LCS string.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
