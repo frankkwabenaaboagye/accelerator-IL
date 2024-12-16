@@ -104,6 +104,34 @@
 ---
 
 ### Advanced Data Structures (Trees & Graphs)
+1. ####  Implement a Balanced Binary Search Tree (AVL Tree)
+- Design and implement an AVL Tree class with methods for insertion, deletion, and searching.
+- Explore balancing operations (rotations) to maintain AVL Tree properties for efficient search and insertion.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+2. #### Utilize a Heap for Task Scheduling
+- Simulate a task scheduling scenario where tasks have priorities.
+- Implement a Min Heap (priority queue) to efficiently schedule tasks based on their priority.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
+3. #### Build a Trie for Autocomplete Functionality
+- Design a Trie data structure to store a set of words.
+- Implement methods to search for prefixes and retrieve words that start with a given prefix.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
+4. ####  Implement Depth-First Search (DFS) on a Graph
+- Represent a graph using an adjacency list or adjacency matrix.
+- Implement a DFS algorithm to traverse all nodes in the graph, exploring connected nodes recursively.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
+5. ####  Find the Shortest Path with Dijkstra's Algorithm
+- Design a scenario with a weighted graph representing a road network.
+- Implement Dijkstra's algorithm to find the shortest path between two nodes in the graph based on edge weights (distances).
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
+6. ####  Calculate Minimum Spanning Tree with Prim's Algorithm
+
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
 
 ---
 

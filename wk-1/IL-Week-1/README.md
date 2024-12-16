@@ -5,30 +5,28 @@
 - [Design a Generic Class for Stack Data Structure](#design-a-generic-class-for-stack-data-structure)
 - [Implement a Thread-Safe Cache using ConcurrentHashMap](#implement-a-thread-safe-cache-using-concurrenthashmap)
 - [Process a Collection using Stream API and Custom Comparator](#process-a-collection-using-stream-api-and-custom-comparator)
-
 ---
-
 - [Handling Checked and Unchecked Exceptions](#handling-checked-and-unchecked-exceptions)
 - [Utilizing Nested Try-Catch Blocks](#utilizing-nested-try-catch-blocks)
 - [Releasing Resources with finally Block](#releasing-resources-with-finally-block)
 - [Creating a Custom Exception](#creating-a-custom-exception)
-
 ---
-
 - [Implement a Thread Pool for Image Processing](#implement-a-thread-pool-for-image-processing)
 - [Leverage ConcurrentHashMap for Thread-Safe Caching](#leverage-concurrenthashmap-for-thread-safe-caching)
 - [Synchronized Block for Updating a Shared Counter](#synchronized-block-for-updating-a-shared-counter)
 - [Deadlock Example and Prevention](#deadlock-example-and-prevention)
-
 ---
-- []
-
+- [Implement a Balanced Binary Search Tree (AVL Tree)](#implement-a-balanced-binary-search-tree-avl-tree)
+- [Utilize a Heap for Task Scheduling](#utilize-a-heap-for-task-scheduling)
+- [Build a Trie for Autocomplete Functionality](#build-a-trie-for-autocomplete-functionality)
+- [Implement Depth-First Search (DFS) on a Graph](#implement-depth-first-search-dfs-on-a-graph)
+- [Find the Shortest Path with Dijkstra's Algorithm](#find-the-shortest-path-with-dijkstras-algorithm)
+- [Calculate Minimum Spanning Tree with Prim's Algorithm](#calculate-minimum-spanning-tree-with-prims-algorithm)
 ---
 - [] 
 
 ---
 ---
-
 ## Implement a Design Pattern
 - creating a text formatter for a text editor
 - a text editor can have different text formatters
@@ -338,6 +336,28 @@ John Smith,54321
         - This ensures that no thread will be waiting indefinitely, and no deadlock will occur.
 
 - [Solution - ./src/main/java/frank/deadlock/](./src/main/java/frank/deadlock/)
+
+
+## Implement a Balanced Binary Search Tree (AVL Tree)
+- [Solution - ./src/main/java/frank/advanceDS/avltree/MyAVLTree.java ](./src/main/java/frank/advanceDS/avltree/MyAVLTree.java)
+
+## Utilize a Heap for Task Scheduling
+- [Solution - ./src/main/java/frank/advanceDS/taskscheduling/](./src/main/java/frank/advanceDS/taskscheduling/)
+
+## Build a Trie for Autocomplete Functionality
+- [./src/main/java/frank/advanceDS/autocomplete/Trie.java](./src/main/java/frank/advanceDS/autocomplete/Trie.java)
+
+##  Implement Depth-First Search (DFS) on a Graph
+- [./src/main/java/frank/advanceDS/graph/DFSExample.java](./src/main/java/frank/advanceDS/graph/DFSExample.java)
+
+##  Find the Shortest Path with Dijkstra's Algorithm
+- Scenario: Road Network
+    - In this road network, there ate cities (nodes) connected by roads (edges). 
+    - Each road has a specific distance (weight). 
+    - The goal is to find the shortest path between two cities using Dijkstra's algorithm
+
+##  Calculate Minimum Spanning Tree with Prim's Algorithm
+
 
 
 
