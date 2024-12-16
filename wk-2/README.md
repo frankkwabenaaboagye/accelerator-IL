@@ -14,8 +14,10 @@
         - [Solution - ./week2/README.md ](./week2/README.md)
     - `Factory Method`
         - Design a Factory class that can create different types of Shape objects (e.g., Circle, Square) based on the provided type.
+        - [Solution - ./week2/README.md ](./week2/README.md)
     - `Abstract Factory`
         - Implement an Abstract Factory that can create families of UI components (e.g., Button, Checkbox) for Windows and MacOS platforms.
+        - [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Unit Testing vs. Integration Testing with Mockito
 
