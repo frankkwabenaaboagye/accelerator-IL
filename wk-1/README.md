@@ -20,6 +20,7 @@
 
 
 * Java Concurrency (Multithreading) - Advanced Concepts
+
 * Advanced Data Structures (Trees & Graphs)
 * Advanced Algorithms: Greedy Algorithms and Dynamic Programming
 
@@ -86,6 +87,17 @@
 ---
 
 ### Java Concurrency (Multithreading) - Advanced Concepts
+1. #### Implement a Thread Pool for Image Processing
+- Simulate processing multiple images concurrently using a thread pool.
+- Utilize an ExecutorService and create separate tasks for processing each image.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+2. #### Synchronized Block for Updating a Shared Counter
+- Create a class with a shared counter variable and a method to increment it.
+- Implement a synchronized block to ensure thread safety when updating the counter variable.
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+3. #### Deadlock Example and Prevention
+- [./IL-Week-1/README.md](./IL-Week-1/README.md)
+
 
 ---
 

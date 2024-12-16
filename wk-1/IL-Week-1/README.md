@@ -13,10 +13,19 @@
 - [Releasing Resources with finally Block](#releasing-resources-with-finally-block)
 - [Creating a Custom Exception](#creating-a-custom-exception)
 
+---
 
-
+- [Implement a Thread Pool for Image Processing](#implement-a-thread-pool-for-image-processing)
+- [Leverage ConcurrentHashMap for Thread-Safe Caching](#leverage-concurrenthashmap-for-thread-safe-caching)
+- [Synchronized Block for Updating a Shared Counter](#synchronized-block-for-updating-a-shared-counter)
+- [Deadlock Example and Prevention](#deadlock-example-and-prevention)
 
 ---
+- []
+
+---
+- [] 
+
 ---
 ---
 
@@ -221,7 +230,114 @@ John Smith,54321
 
 ---
 
+## Implement a Thread Pool for Image Processing
+- I created a GUI application to process images using a thread pool
+- The ExecutorService manages threads, and logic for converting images to black and white
+- An ExecutorService with a fixed thread pool is created to manage threads efficiently based on available CPU cores.
+- Image processing tasks run concurrently.
+- Logs are updated in the Event Dispatch Thread using `SwingUtilities.invokeLater()` to ensure thread safety.
 
+- [Solution - ./src/main/java/frank/JavaConcurrency/ImageProcessingApp.java](./src/main/java/frank/JavaConcurrency/ImageProcessingApp.java)
+
+- Execution Flow Diagram
+    - Below is the execution flow of the application, showing how the Thread Pool fits into the design:
+
+```plaintext
+                      +-------------------------+
+                      |       User GUI         |
+                      |    (Swing JFrame)      |
+                      +-------------------------+
+                                  |
+                                  v
+                  +------------------------------+
+                  | Select Images Button Clicked |
+                  +------------------------------+
+                                  |
+                                  v
+                      +-------------------+
+                      | JFileChooser Opens |
+                      +-------------------+
+                                  |
+                                  v
+              +----------------------------------+
+              | Selected Files Passed to Thread |
+              |            Pool                 |
+              +----------------------------------+
+                                  |
+                +-------------------------+------------------+
+                |                         |                  |
+                v                         v                  v
+      +-----------------+       +-----------------+  +-----------------+
+      | Image Task 1    |       | Image Task 2    |  | Image Task N    |
+      +-----------------+       +-----------------+  +-----------------+
+                |                         |                  |
+                v                         v                  v
+  +-----------------------+   +-----------------------+  +-----------------------+
+  | Convert to Black/White|   | Convert to Black/White|  | Convert to Black/White|
+  +-----------------------+   +-----------------------+  +-----------------------+
+                |                         |                  |
+                v                         v                  v
+  +-----------------------+   +-----------------------+  +-----------------------+
+  | Save Processed Image  |   | Save Processed Image  |  | Save Processed Image  |
+  +-----------------------+   +-----------------------+  +-----------------------+
+                |                         |                  |
+                v                         v                  v
+     +-----------------------------------------------------------+
+     |                   Update Log in GUI                       |
+     +-----------------------------------------------------------+
+```
+
+---
+
+## Synchronized Block for Updating a Shared Counter
+- The `counter` variable is shared between both windows.
+- I created a two windows display but they can independently control their timers
+- The synchronized block inside the increment() method ensures that only 
+    - one thread can modify the counter at a time, which guarantees that both windows 
+    - are displaying the correct, incremented counter value.
+- Window 1 increments the counter every second, while Window 2 increments it every 0.8 seconds.
+- [Solution - ./src/main/java/frank/sharedcounter/MultiWindowSharedCounterApp.java](./src/main/java/frank/sharedcounter/MultiWindowSharedCounterApp.java)
+
+```plaintext
++-------------------+     +-------------------+
+|   Window 1        |     |   Window 2        |
+|-------------------|     |-------------------|
+|  Counter Display  |     |  Counter Display  |
+|  Start Button     |     |  Start Button     |
+|  Stop Button      |     |  Stop Button      |
++-------------------+     +-------------------+
+         |                        |
+         |                        |
+         |       Shared Counter   |
+         |          (Thread-Safe) |
+         +------------------------+
+                    |
+                    v
+               +-------------------+
+               | Shared Counter     |
+               | (Thread-Safe)      |
+               +-------------------+
+                    |
+                    v
+                +-------------------+
+                |  Increment Method |
+                | (Synchronized)    |
+                +-------------------+
+
+```
+
+
+## Deadlock Example and Prevention
+- In the `DeadlockSimulation` class
+    - Thread 1 locks resource1, then tries to lock resource2.
+    - Thread 2 locks resource2, then tries to lock resource1.
+    - this I think will cause a deadlock because each thread is waiting for the other to release the resource.
+- `Avoiding the Deadlock`:
+    - in the `NoDeadlockSimulation` class
+        - Both Thread 1 and Thread 2 now lock resource1 first, then lock resource2.
+        - This ensures that no thread will be waiting indefinitely, and no deadlock will occur.
+
+- [Solution - ./src/main/java/frank/deadlock/](./src/main/java/frank/deadlock/)
 
 
 
