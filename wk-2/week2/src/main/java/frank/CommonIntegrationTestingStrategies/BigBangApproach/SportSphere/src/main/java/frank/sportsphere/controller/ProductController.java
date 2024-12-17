@@ -20,7 +20,7 @@ public class ProductController {
 
     @GetMapping("/read-all")
     public List<Product> getAllProducts() {
-        return productService.readProducts();
+        return productService.getAllProducts();
     }
 
     @GetMapping("/read")

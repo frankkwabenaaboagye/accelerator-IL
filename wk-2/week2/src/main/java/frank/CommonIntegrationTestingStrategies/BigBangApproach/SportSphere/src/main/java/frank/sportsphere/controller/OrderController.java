@@ -20,7 +20,7 @@ public class OrderController {
 
     @GetMapping("/read-all")
     public List<Order> getAllOrders() {
-        return orderService.readOrders();
+        return orderService.getAllOrders();
     }
 
     @GetMapping("/read")
