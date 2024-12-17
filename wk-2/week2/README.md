@@ -182,3 +182,76 @@
               +----------------------+
 
 ```
+- [Solution - ./src/main/java/frank/behavioral/strategy/](./src/main/java/frank/behavioral/strategy/)
+
+## Observer
+- The `WeatherStation` maintains a list of `observers` (`Display` objects).
+- Whenever the temperature changes via `setTemperature()`, the WeatherStation calls `notifyObservers()` to update all registered Display objects.
+- Each Display object implements Observer and responds to the `update()` method, printing the new temperature.
+- A display can be removed from the list of observers via the `removeObserver()` method, and it will no longer receive updates when the temperature changes.
+```plaintext
+ +--------------------------+        1       +--------------------------+
+ |     WeatherStation        |----------------|         Observer         |
+ +--------------------------+                +--------------------------+
+ | - observers: List<Observer> |               | + update(temp: float)    |
+ | - temperature: float       |               +--------------------------+
+ +--------------------------+                          ^
+ | + setTemperature(temp: float): void |               |
+ | + getTemperature(): float            |              |
+ | + addObserver(o: Observer): void     |              |
+ | + removeObserver(o: Observer): void  |              |
+ | + notifyObservers(): void            |              |
+ +--------------------------+                          |
+          ^                                            |
+          |                                            |
+          |                                            |  
+          |                                            |
+ +--------------------------+                +--------------------------+
+ |       Display             |                |       ConcreteObserver   |
+ +--------------------------+                +--------------------------+
+ | - displayName: String     |                | - subject: WeatherStation |
+ +--------------------------+                +--------------------------+
+ | + update(temp: float)     |                | + update(temp: float)     |
+ +--------------------------+                +--------------------------+
+
+```
+- [Solution - ./src/main/java/frank/behavioral/observer/](./src/main/java/frank/behavioral/observer/)
+
+## Tempalate
+- `DataEncryption`: Abstract class defining the template method for data encryption
+- `AESEncryption` (Concrete Class)
+- `DESEncryption` (Concrete Class)
+- `FrankEncryption` (Concrete Class)
+```plaintext
+
+                 +------------------+
+                 |  DataEncryption  |
+                 +------------------+
+                 | +encryptData()   |
+                 | +generateKey()   |
+                 | +encrypt()       |
+                 | +decryptData()   |
+                 +------------------+
+                         ^
+                         |
+     +-------------------+------------------+
+     |                                      |
++-------------------+                  +------------------+
+|  AESEncryption    |                  |   DESEncryption   |
++-------------------+                  +------------------+
+| +generateKey()    |                  | +generateKey()    |
+| +encrypt()        |                  | +encrypt()        |
+| +decryptData()    |                  | +decryptData()    |
++-------------------+                  +------------------+
+                         ^
+                         |
+                 +------------------+
+                 |  FrankEncryption |
+                 +------------------+
+                 | +generateKey()   |
+                 | +encrypt()       |
+                 | +decryptData()   |
+                 +------------------+
+
+```
+- [Solution - ./src/main/java/frank/behavioral/template/](./src/main/java/frank/behavioral/template/)
