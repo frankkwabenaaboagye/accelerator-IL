@@ -1,9 +1,11 @@
 # Week 2
 - [Design Patterns: Mastering the Art of Reusable Object-Oriented Solutions](#design-patterns-mastering-the-art-of-reusable-object-oriented-solutions)
-- Unit Testing vs. Integration Testing with Mockito
+- [Unit Testing vs. Integration Testing with Mockito](#unit-testing-vs-integration-testing-with-mockito)
 - Integration Testing
 - Spring MVC: Building Flexible and Maintainable Web Applications
 - Lab: Building a Spring MVC Web Application with Database Integration
+
+- [Solution - ./week2/README.md ](./week2/README.md)
 
 ---
 
@@ -21,15 +23,30 @@
 - Structural Patterns:
     - `Adapter`
         - Create an Adapter class that allows you to use a legacy payment processing library with a modern API.
+        - [Solution - ./week2/README.md ](./week2/README.md)
     - `Facade`
         - Develop a Facade class for a complex e-commerce order processing system, offering simplified methods for placing and managing orders.
+        - [Solution - ./week2/README.md ](./week2/README.md)
 - Behavioral Patterns:
-    - `Strategy`: Design a Strategy interface for sorting algorithms (e.g., Bubble Sort, Quick Sort) and implement concrete classes for each algorithm.
+    - `Strategy`
+        - Design a Strategy interface for sorting algorithms (e.g., Bubble Sort, Quick Sort) and implement concrete classes for each algorithm.
+        - [Solution - ./week2/README.md ](./week2/README.md)
     - `Observer`
+        - Create a Subject (e.g., Weather Station) and Observer (e.g., Display) classes to demonstrate weather data updates being notified to registered displays.
+        - [Solution - ./week2/README.md ](./week2/README.md)
     - `Template`
+        - Design a Template Method for data encryption that defines the overall process (key generation, encryption, decryption) with specific steps implemented by subclasses for different encryption algorithms.
+        - [Solution - ./week2/README.md ](./week2/README.md)
 
 
 ## Unit Testing vs. Integration Testing with Mockito
+-  Unit Testing with Mockito
+    - `Scenario`: Develop a class OrderServiceImpl that interacts with an OrderRepository to save orders.
+    - `Unit Test`: Implement a unit test using JUnit to verify `OrderServiceImpl.saveOrder` method functionality.
+        - Use Mockito to mock the `OrderRepository` interface.
+        - Configure the mock to behave in a specific way (e.g., return a success flag when save is called).
+        - Call saveOrder on the service and assert that the mock repository's save method is called with the correct order object
+
 
 ## Integration Testing
 

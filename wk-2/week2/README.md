@@ -8,6 +8,8 @@
 - [Strategy](#strategy)
 - [Observer](#observer)
 - [Template](#tempalate)
+- [Unit Testing with Mockito](#unit-testing-with-mockito)
+- [Basic Integration Testing](#basic-integration-testing)
 
 ---
 
@@ -268,4 +270,11 @@
 ```
 - [Solution - ./src/main/java/frank/behavioral/template/](./src/main/java/frank/behavioral/template/)
 
-## 
+## Unit Testing with Mockito
+- `testSaveOrder_ShouldReturnTrue_WhenOrderIsSavedSuccessfully`
+    - This test verifies that when an order is successfully saved (the repository returns true), the `saveOrder` method returns true.
+- `testSaveOrder_ShouldReturnFalse_WhenOrderSaveFails`
+    - This test verifies that if the order save fails (repository returns false), the `saveOrder` method returns false.
+
+## Basic Integration Testing
+
