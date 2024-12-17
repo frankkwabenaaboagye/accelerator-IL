@@ -1,4 +1,16 @@
 
+# Solutions
+- [Singleton](#singleton)
+- [Factory Method](#factory-method)
+- [Abstract Factory](#abstract-factory)
+- [Adapter](#adapter)
+- [Facade](#facade)
+- [Strategy](#strategy)
+- [Observer](#observer)
+- [Template](#tempalate)
+
+---
+
 ## Singleton
 - `Private static instance`: The instance variable holds the single instance of the Logger class.
 - `Private constructor` 🔒 : This prevents any external class from instantiating the Logger directly.
@@ -255,3 +267,5 @@
 
 ```
 - [Solution - ./src/main/java/frank/behavioral/template/](./src/main/java/frank/behavioral/template/)
+
+## 
