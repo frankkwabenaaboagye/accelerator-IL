@@ -3,3 +3,9 @@ export interface Order {
   productId: string;
   quantity: number
 }
+
+export interface NewOrder {
+  productId: string;
+  quantity: number
+}
+

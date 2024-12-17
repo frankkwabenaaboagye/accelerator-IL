@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class DatabasePopulator implements CommandLineRunner {
@@ -21,40 +23,40 @@ public class DatabasePopulator implements CommandLineRunner {
     }
 
     public void populateDatabase() {
-
         productRepository.deleteAll();
         orderRepository.deleteAll();
 
-        Product product1 = new Product();
-        product1.setName("Football");
-        product1.setPrice(25.0);
-        product1.setDescription("A high-quality football");
+        Product product1 = Product.builder()
+                .name("Football")
+                .price(25.0)
+                .description("A high-quality football")
+                .build();
 
-        Product product2 = new Product();
-        product2.setName("Basketball");
-        product2.setPrice(30.0);
-        product2.setDescription("A high-quality basketball");
+        Product product2 = Product.builder()
+                .name("Basketball")
+                .price(30.0)
+                .description("A high-quality basketball")
+                .build();
 
-        Product product3 = new Product();
-        product3.setName("Tennis Racket");
-        product3.setPrice(50.0);
-        product3.setDescription("A professional tennis racket");
+        Product product3 = Product.builder()
+                .name("Tennis Racket")
+                .price(50.0)
+                .description("A professional tennis racket")
+                .build();
 
-        productRepository.save(product1);
-        productRepository.save(product2);
-        productRepository.save(product3);
+        productRepository.saveAll(List.of(product1, product2, product3));
 
-        // Add some orders using the product IDs (assuming you have saved them and have the product IDs)
-        Order order1 = new Order();
-        order1.setProductId(product1.getId());
-        order1.setQuantity(2);
+        Order order1 = Order.builder()
+                .productId(product1.getId())
+                .quantity(2)
+                .build();
 
-        Order order2 = new Order();
-        order2.setProductId(product2.getId());
-        order2.setQuantity(1);
+        Order order2 = Order.builder()
+                .productId(product2.getId())
+                .quantity(1)
+                .build();
 
-        orderRepository.save(order1);
-        orderRepository.save(order2);
+        orderRepository.saveAll(List.of(order1, order2));
 
         System.out.println("Database populated with sample data.");
     }

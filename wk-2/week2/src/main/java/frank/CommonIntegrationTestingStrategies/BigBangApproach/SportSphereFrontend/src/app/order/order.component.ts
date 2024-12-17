@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {OrderService} from '../order.service';
-import {Order} from '../order.model';
+import {NewOrder, Order} from '../order.model';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
 
@@ -18,7 +18,7 @@ import {NgForOf, NgIf} from '@angular/common';
 export class OrderComponent implements OnInit{
 
   orders: Order[] = [];
-  newOrder: Order = { id: '', productId: '', quantity: 0 };
+  newOrder: NewOrder = { productId: '', quantity: 0 };
 
   constructor(private orderService: OrderService) {
   }
@@ -40,16 +40,26 @@ export class OrderComponent implements OnInit{
   }
 
   public createOrder(): void {
-    this.orderService.createOrders(this.newOrder).subscribe(
-      data => {
+    this.orderService.createOrders(this.newOrder).subscribe({
+      next: (data) => {
         this.orders.push(data);
-        this.newOrder = { id: '', productId: '', quantity: 0 }; // resetting it
+        this.newOrder = { productId: '', quantity: 0 }; // resetting it
+      },
+      error: (err) => {
+        console.error('Error creating order: ', err);
+      }
     });
   }
 
   public deleteOrder(id: string): void {
-    this.orderService.deleteOrder(id).subscribe(() => {
-      this.orders = this.orders.filter(order => order.id !== id);
+    this.orderService.deleteOrder(id).subscribe({
+      next: (data) => {
+        this.orders = this.orders.filter(order => order.id !== id);
+      },
+      error: (err) => {
+        console.error('Error deleting order: ', err);
+
+      }
     });
   }
 

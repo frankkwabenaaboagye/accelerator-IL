@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Product} from '../product.model';
+import {NewProduct, Product} from '../product.model';
 import {ProductService} from '../product.service';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
@@ -18,8 +18,7 @@ import {NgForOf, NgIf} from '@angular/common';
 export class ProductComponent implements OnInit{
 
   products: Product[] = []
-  newProduct: Product = {
-    id: "",
+  newProduct: NewProduct = {
     name: "",
     price : 0,
     description: ""
@@ -43,12 +42,43 @@ export class ProductComponent implements OnInit{
     });
   }
 
+
+  createProduct(): void {
+    this.productService.createProduct(this.newProduct).subscribe({
+      next:(data)=>{
+        this.products.push(data);
+        this.newProduct = {name: '', price: 0, description: '' }; // resetting it
+      },
+      error: (err) =>{
+        console.error('Error creating product: ', err)
+      }
+    });
+  }
+
+
+  deleteProduct(id: string): void {
+    this.productService.deleteProduct(id).subscribe({
+      next: ()=>{
+        this.products = this.products.filter(product => product.id !== id);
+      },
+      error: (err) => {
+        console.error('Error deleting product: ', err)
+      }
+    });
+  }
+
+}
+
+/*
+
+
   createProduct(): void {
     this.productService.createProduct(this.newProduct).subscribe(data => {
       this.products.push(data);
-      this.newProduct = { id: '', name: '', price: 0, description: '' }; // resetting it
+      this.newProduct = {name: '', price: 0, description: '' }; // resetting it
     });
   }
+
 
   deleteProduct(id: string): void {
     this.productService.deleteProduct(id).subscribe(() => {
@@ -56,4 +86,5 @@ export class ProductComponent implements OnInit{
     });
   }
 
-}
+
+ */

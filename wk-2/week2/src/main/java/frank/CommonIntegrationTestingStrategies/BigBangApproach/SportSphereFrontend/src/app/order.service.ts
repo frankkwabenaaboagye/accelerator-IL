@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Order} from './order.model';
+import {NewOrder, Order} from './order.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,8 @@ export class OrderService {
     return this.http.get<Order[]>(`${this.apiUrl}/read-all`);
   }
 
-  public createOrders(order: Order):Observable<Order>{
-    return this.http.post<Order>(`${this.apiUrl}/create`, order)
+  public createOrders(newOrder: NewOrder):Observable<Order>{
+    return this.http.post<Order>(`${this.apiUrl}/create`, newOrder)
   }
 
   public getOrderById(id: string):Observable<Order>{

@@ -280,7 +280,7 @@
                  +------------------+
                  |  FrankEncryption |
                  +------------------+
-                 | +generateKey()   |
+                 | +generateKey()   |gacp 
                  | +encrypt()       |
                  | +decryptData()   |
                  +------------------+
