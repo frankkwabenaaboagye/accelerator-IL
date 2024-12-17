@@ -277,4 +277,6 @@
     - This test verifies that if the order save fails (repository returns false), the `saveOrder` method returns false.
 
 ## Basic Integration Testing
+- `testSaveOrder_ShouldPersistOrderInDatabase`:
+    - The test validates the interaction between `OrderServiceImpl` and the `in-memory H2` database to ensure that Order entities are correctly persisted and retrieved.
 
