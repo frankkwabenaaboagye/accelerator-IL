@@ -18,6 +18,12 @@
     - `Abstract Factory`
         - Implement an Abstract Factory that can create families of UI components (e.g., Button, Checkbox) for Windows and MacOS platforms.
         - [Solution - ./week2/README.md ](./week2/README.md)
+- Structural Patterns:
+    - `Adapter`
+        - Create an Adapter class that allows you to use a legacy payment processing library with a modern API.
+    - `Facade`
+        - 
+
 
 ## Unit Testing vs. Integration Testing with Mockito
 

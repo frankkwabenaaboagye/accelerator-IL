@@ -4,6 +4,7 @@
 - `Private constructor` 🔒 : This prevents any external class from instantiating the Logger directly.
 - `Thread-safe singleton initialization` 🧵🔐: The `getInstance()` method is thread-safe, ensuring that only one instance is created even in multi-threaded environments. The synchronized block inside the method ensures that only one thread can initialize the instance at a time.
 - `Logging methods`: The `log()` method simply prints log messages to the console. Additional methods (`info()`, `error()`) have been added for different log levels.
+- [Solution - ./src/main/java/frank/creational/singleton/](./src/main/java/frank/creational/singleton/)
 
 ## Factory Method
 - `Shape Interface`: The base interface for all shapes.
@@ -34,6 +35,7 @@
 +-------------------+    +----------------------+
 
 ```
+- [Solution - ./src/main/java/frank/creational/factorymethod/](./src/main/java/frank/creational/factorymethod/)
 
 ## Abstract Factory
 - Structure
@@ -74,3 +76,74 @@
 
 
 ```
+- [Solution - ./src/main/java/frank/creational/abstractfactory/ ](./src/main/java/frank/creational/abstractfactory/)
+
+## Adapter
+- Structure
+    - Legacy System:
+        - The `LegacyPaymentProcessor` works with a processPayment method.
+        - It accepts `customerId` and `amount` as input.
+    
+    - Adapter
+        - The adapter "translates" the modern account number format to a format that the legacy system understands.
+            - For example:
+                - `MODERN12345` → `LEGACY12345`
+        - If the payment amount is invalid (e.g., <= 0), it defaults to a small positive value.
+        - Simulates a processing fee of $0.50 that might be required for the legacy system
+- [Solution - ./src/main/java/frank/structural/adapater/](./src/main/java/frank/structural/adapater/)
+
+## Facade
+- The `OrderFacade` acts as a single point of entry for clients to perform tasks like placing an order, viewing the catalog, or checking product availability. 
+- Behind the scenes, the facade coordinates with the following subsystems:
+    - Inventory System : Ensures the product is available before placing the order.
+    - Payment System
+    - Shipping System
+- Without Facade: The client would need to interact with each subsystem individually
+- With Facade:The client calls a single method, such as placeOrder, and the OrderFacade handles everything internally
+```plaintext
+                                 +-----------------------------+
+                                 |        OrderFacade          |
+                                 |-----------------------------|
+                                 | + displayCatalog()          |
+                                 | + placeOrder()              |
+                                 | + checkProductAvailability()|
+                                 +-----------------------------+
+                                              |   |   |
+                               ----------------    |    -----------------
+                              |                    |                    |
+                 +-----------------+      +-----------------+      +----------------+
+                 |   Inventory     |      |    Payment      |      |    Shipping    |
+                 |-----------------|      |-----------------|      |----------------|
+                 | + addProduct()  |      | + processPayment()|    | + shipProduct()|
+                 | + isAvailable() |      |                 |      |                |
+                 | + reduceStock() |      |                 |      |                |
+                 +-----------------+      +-----------------+      +----------------+
+
+                                              |
+                                 +-----------------------------+
+                                 |          Product            |
+                                 |-----------------------------|
+                                 | - id: String                |
+                                 | - name: String              |
+                                 | - type: String              |
+                                 |-----------------------------|
+                                 | + getId()                   |
+                                 | + getName()                 |
+                                 | + getType()                 |
+                                 +-----------------------------+
+
+                                              ^
+                                              |
+                                 +-----------------------------+
+                                 |       FrankECommerceApp     |
+                                 |-----------------------------|
+                                 | - main(args: String[])      |
+                                 |-----------------------------|
+                                 |   Uses OrderFacade          |
+                                 +-----------------------------+
+
+```
+- Client
+    - `FrankECommerceApp` interacts only with the OrderFacade.
+    - It does not need to interact with subsystems directly.
+- [Solution - ./src/main/java/frank/structural/facade/](./src/main/java/frank/structural/facade/)
