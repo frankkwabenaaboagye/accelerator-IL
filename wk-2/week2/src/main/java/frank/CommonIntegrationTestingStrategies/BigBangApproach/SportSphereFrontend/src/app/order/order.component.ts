@@ -1,11 +1,56 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {OrderService} from '../order.service';
+import {Order} from '../order.model';
+import {FormsModule} from '@angular/forms';
+import {NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-order',
-  imports: [],
+  imports: [
+    FormsModule,
+    NgIf,
+    NgForOf
+  ],
   templateUrl: './order.component.html',
+  standalone: true,
   styleUrl: './order.component.css'
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit{
+
+  orders: Order[] = [];
+  newOrder: Order = { id: '', productId: '', quantity: 0 };
+
+  constructor(private orderService: OrderService) {
+  }
+
+  ngOnInit(): void {
+    this.fetchOrders();
+  }
+
+
+  public fetchOrders(): void {
+    this.orderService.getOrders().subscribe({
+      next:(data)=>{
+        this.orders = data;
+      },
+      error: (err) => {
+        console.log('Error fetching orders: ', err)
+      }
+    });
+  }
+
+  public createOrder(): void {
+    this.orderService.createOrders(this.newOrder).subscribe(
+      data => {
+        this.orders.push(data);
+        this.newOrder = { id: '', productId: '', quantity: 0 }; // resetting it
+    });
+  }
+
+  public deleteOrder(id: string): void {
+    this.orderService.deleteOrder(id).subscribe(() => {
+      this.orders = this.orders.filter(order => order.id !== id);
+    });
+  }
 
 }

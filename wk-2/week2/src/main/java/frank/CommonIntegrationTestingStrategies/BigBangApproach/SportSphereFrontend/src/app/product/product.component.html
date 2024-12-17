@@ -1,1 +1,38 @@
-<p>product works!</p>
+<div class="product-container">
+  <h2>Products</h2>
+
+  <div class="form-container">
+    <h3>Create New Product</h3>
+    <form (ngSubmit)="createProduct()" class="product-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="newProduct.name" name="name" required placeholder="Enter product name">
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" [(ngModel)]="newProduct.price" name="price" required placeholder="Enter price">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" [(ngModel)]="newProduct.description" name="description" required placeholder="Enter product description">
+      </div>
+      <button type="submit" class="submit-btn">Create Product</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <div *ngIf="products.length > 0" class="product-list-container">
+    <h3>Product List</h3>
+    <ul class="product-list">
+      <li *ngFor="let product of products" class="product-item">
+        <span class="product-name">{{ product.name }} - ${{ product.price }}</span>
+        <button (click)="deleteProduct(product.id)" class="delete-btn">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="products.length === 0" class="no-products-message">
+    <p>No products available.</p>
+  </div>
+</div>

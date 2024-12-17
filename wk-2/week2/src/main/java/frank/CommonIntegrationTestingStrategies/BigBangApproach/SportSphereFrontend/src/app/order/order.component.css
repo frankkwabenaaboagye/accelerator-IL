@@ -1,0 +1,98 @@
+
+.order-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.form-container {
+  margin-bottom: 30px;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+
+.order-list-container {
+  text-align: left;
+}
+
+.order-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-name {
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.no-orders-message p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
