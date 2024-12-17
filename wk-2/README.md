@@ -1,7 +1,7 @@
 # Week 2
 - [Design Patterns: Mastering the Art of Reusable Object-Oriented Solutions](#design-patterns-mastering-the-art-of-reusable-object-oriented-solutions)
 - [Unit Testing vs. Integration Testing with Mockito](#unit-testing-vs-integration-testing-with-mockito)
-- Integration Testing
+- [Integration Testing](#integration-testing)
 - Spring MVC: Building Flexible and Maintainable Web Applications
 - Lab: Building a Spring MVC Web Application with Database Integration
 
@@ -46,9 +46,12 @@
         - Use Mockito to mock the `OrderRepository` interface.
         - Configure the mock to behave in a specific way (e.g., return a success flag when save is called).
         - Call saveOrder on the service and assert that the mock repository's save method is called with the correct order object
+- [Solution - ./week2/README.md ](./week2/README.md)
 
 
 ## Integration Testing
+- Common Integration Testing Strategies
+    - 
 
 ## Spring MVC: Building Flexible and Maintainable Web Applications
 
