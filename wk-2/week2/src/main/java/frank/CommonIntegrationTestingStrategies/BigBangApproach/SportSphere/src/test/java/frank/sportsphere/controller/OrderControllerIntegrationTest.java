@@ -1,7 +1,9 @@
 package frank.sportsphere.controller;
 
 import frank.sportsphere.SportSphereApplication;
+import frank.sportsphere.model.Order;
 import frank.sportsphere.model.Product;
+import frank.sportsphere.repository.OrderRepository;
 import frank.sportsphere.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(classes = SportSphereApplication.class)
 @AutoConfigureMockMvc
-public class ProductControllerIntegrationTest {
+public class OrderControllerIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -26,38 +28,18 @@ public class ProductControllerIntegrationTest {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private OrderRepository orderRepository;
+
     @BeforeEach
     public void setup() {
         productRepository.deleteAll();
+        orderRepository.deleteAll();
     }
 
     @Test
-    public void testGetAllProducts() throws Exception {
+    public void testPlaceOrder() throws Exception {
 
-        Product product1 = Product.builder()
-                .name("Football")
-                .price(25.0)
-                .description("A high-quality football")
-                .build();
-
-        Product product2 = Product.builder()
-                .name("Basketball")
-                .price(30.0)
-                .description("A high-quality basketball")
-                .build();
-        productRepository.saveAll(List.of(product1, product2));
-
-        mockMvc.perform(MockMvcRequestBuilders.get("/products/read-all"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Football"))
-                .andExpect(jsonPath("$[1].name").value("Basketball"))
-                .andExpect(jsonPath("$[0].price").value(25.0))
-                .andExpect(jsonPath("$[1].price").value(30.0));
-    }
-
-    @Test
-    public void testGetProductById() throws Exception {
-        // Given
         Product product = Product.builder()
                 .name("Football")
                 .price(25.0)
@@ -65,10 +47,17 @@ public class ProductControllerIntegrationTest {
                 .build();
         Product savedProduct = productRepository.save(product);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/products/read")
-                        .param("id", savedProduct.getId()))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Football"))
-                .andExpect(jsonPath("$.price").value(25.0));
+        Order order = Order.builder()
+                .productId(savedProduct.getId())
+                .quantity(2)
+                .build();
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/orders/create")
+                        .contentType("application/json")
+                        .content("{\"productId\": \"" + savedProduct.getId() + "\", \"quantity\": 2}"))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.productId").value(savedProduct.getId()))
+                .andExpect(jsonPath("$.quantity").value(2));
     }
+
 }
