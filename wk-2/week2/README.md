@@ -10,6 +10,7 @@
 - [Template](#tempalate)
 - [Unit Testing with Mockito](#unit-testing-with-mockito)
 - [Basic Integration Testing](#basic-integration-testing)
+- [Big Bang Approach - Integration Testing]()
 
 ---
 
@@ -304,3 +305,8 @@
   - The test validates the interaction between `OrderServiceImpl` and the `in-memory H2` database to ensure that Order entities are correctly persisted and retrieved.
 - 📂 [Solution - ./src/main/java/frank/UnitTestingwithMockitoIntegrationTesting/integration/](./src/main/java/frank/UnitTestingwithMockitoIntegrationTesting/integration/)
 - 🔗 [Test](./src/test/java/frank/UnitTestingwithMockitoIntegrationTesting/integration/)
+
+
+## Big Bang Approach - Integration Testing
+- Go to the README
+    - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/BigBangApproach/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/BigBangApproach/README.md)
