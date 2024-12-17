@@ -22,7 +22,11 @@
     - `Adapter`
         - Create an Adapter class that allows you to use a legacy payment processing library with a modern API.
     - `Facade`
-        - 
+        - Develop a Facade class for a complex e-commerce order processing system, offering simplified methods for placing and managing orders.
+- Behavioral Patterns:
+    - `Strategy`: Design a Strategy interface for sorting algorithms (e.g., Bubble Sort, Quick Sort) and implement concrete classes for each algorithm.
+    - `Observer`
+    - `Template`
 
 
 ## Unit Testing vs. Integration Testing with Mockito

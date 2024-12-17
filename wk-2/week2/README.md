@@ -147,3 +147,38 @@
     - `FrankECommerceApp` interacts only with the OrderFacade.
     - It does not need to interact with subsystems directly.
 - [Solution - ./src/main/java/frank/structural/facade/](./src/main/java/frank/structural/facade/)
+
+
+## Strategy
+- `Strategy Interface`: defines the `sort()` method, which is implemented by various sorting algorithms.
+- `Concrete Strategies`: `BubbleSort` and `QuickSort` implement the SortStrategy interface and provide their respective sorting logic.
+- `Context`: The SortingContext class maintains a reference to a SortStrategy object and delegates the sorting task to the strategy.
+```plaintext
+          +----------------------+
+          |   SortStrategy       | <---- Interface
+          +----------------------+
+          | + sort(int[] array)  |
+          +----------------------+
+                    ^
+                    |
+         +----------+----------+
+         |                     |
++-------------------+   +-------------------+
+|   BubbleSort      |   |   QuickSort       |
++-------------------+   +-------------------+
+| + sort(int[] array)|   | + sort(int[] array)|
++-------------------+   +-------------------+
+
+                       ^
+                       |
+                       |
+              +----------------------+
+              |  SortingContext      |
+              +----------------------+
+              | - strategy: SortStrategy |
+              +----------------------+
+              | + setSortStrategy()   |
+              | + sortArray(int[])    |
+              +----------------------+
+
+```
