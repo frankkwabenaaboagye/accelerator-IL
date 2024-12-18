@@ -13,6 +13,7 @@
 - [Big Bang Approach - Integration Testing](#big-bang-approach---integration-testing)
 - [Top-Down Approach - Integration Testing](#top-down-approach---integration-testing)
 - [Bottom-Up Approach - Integration Testing](#bottom-up-approach---integration-testing)
+- [Hybrid Approach (Preferred)](#hybrid-approach-preferred)
 
 ---
 
