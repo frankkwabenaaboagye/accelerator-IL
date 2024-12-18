@@ -333,11 +333,13 @@
 - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md)
 
 ## Building a Simple Spring MVC Application
-- In this section, we created a basic Spring MVC application with JSP. We set up a `welcome.jsp` view to display a static message. The application uses `@Controller` and `@GetMapping` to render the welcome page.
+- In this section,I created a basic Spring MVC application with JSP. I set up a `welcome.jsp` view to display a static message. The application uses `@Controller` and `@GetMapping` to render the welcome page.
 - [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)
 
 ## Handling User Input with a Form
-- In this extended section, we added a form to the `welcome.jsp` page, allowing users to input their name. We then handled the form submission using a `POST` request and displayed a personalized greeting on a new page (`greeting.jsp`) using the user's name.
+- In this extended section, I added a form to the `welcome.jsp` page, allowing users to input their name. I then handled the form submission using a `POST` request and displayed a personalized greeting on a new page (`greeting.jsp`) using the user's name.
 - [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)
 
 ## Building a Spring MVC Web Application with Database Integration
+-  ToDo application with database integration using H2 in-memory database.
+- [./src/main/java/frank/LabWebapplicationusingSpringMVC/ToDoApp/README.md](./src/main/java/frank/LabWebapplicationusingSpringMVC/ToDoApp/README.md)
