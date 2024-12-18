@@ -11,7 +11,8 @@
 - [Unit Testing with Mockito](#unit-testing-with-mockito)
 - [Basic Integration Testing](#basic-integration-testing)
 - [Big Bang Approach - Integration Testing](#big-bang-approach---integration-testing)
-- [Top-Down Approach: - Integration Testing](#top-down-approach---integration-testing)
+- [Top-Down Approach - Integration Testing](#top-down-approach---integration-testing)
+- [Bottom-Up Approach - Integration Testing](#bottom-up-approach---integration-testing)
 
 ---
 
@@ -312,10 +313,14 @@
 - Go to the README
     - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/BigBangApproach/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/BigBangApproach/README.md)
 
-## Top-Down Approach: - Integration Testing
+## Top-Down Approach - Integration Testing
 - Controller Test: High-Level Test
   - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/controllers/](./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/controllers/)
 - Service Test: Mid-Level Test
   - [Solution  - ](./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/services/)
 - Top-Level Tests: Begin by testing controllers using stubbed service layers.
 - Mid-Level Tests: Test the service layer with real database integration using H2 in-memory database.
+
+## Bottom-Up Approach - Integration Testing
+- interactions between the `UserProfileService` and `NewsFeedService`
+- [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/BottomUpApproach/SocialMediaAppLab/src/test/java/frank/socialmediaapplab/](./src/main/java/frank/CommonIntegrationTestingStrategies/BottomUpApproach/SocialMediaAppLab/src/test/java/frank/socialmediaapplab/)
