@@ -80,10 +80,10 @@
     - Access form data using request parameters in the controller method.
     - Update the model with the user's name and redirect to a new view (e.g., `"greeting.jsp"`) displaying a personalized greeting.
 
-- [Solution - ](./week2/README.md)
+- [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Building a Spring MVC Web Application with Database Integration
 
-- [Solution - ](./week2/README.md)
+- [Solution - ./week2/README.md](./week2/README.md)
 
 
