@@ -99,12 +99,12 @@
     - Define controller methods for handling user interactions:
         - `/todos`: List all available ToDo items (using the DAO to retrieve data).
         - `/todo/add`: Handle form submissions for adding new ToDo items (use DAO to persist the new item).
-        - `/todo/complete/{id}`: Mark a specific ToDo item as complete by its ID (update the item in the database using DAO).
+        - `/todo/complete/{id}`: Mark a specific ToDo item as complete by its ID (update the item in the database using DAO)
 - Views:
     - Create JSP (or your preferred view technology) files for displaying the ToDo list and adding new items.
     - Use Spring MVC expressions (e.g., ${todos}) to access model data (list of ToDo items) in your views.
     - Utilize HTML forms for user input (adding new items) and submit them to appropriate controller methods.
-    
+
 - [Solution - ./week2/README.md](./week2/README.md)
 
 
