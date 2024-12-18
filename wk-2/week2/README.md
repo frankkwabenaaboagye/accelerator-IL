@@ -15,6 +15,7 @@
 - [Bottom-Up Approach - Integration Testing](#bottom-up-approach---integration-testing)
 - [Hybrid Approach (Preferred)](#hybrid-approach-preferred)
 - [Building a Simple Spring MVC Application](#building-a-simple-spring-mvc-application)
+- [Handling User Input with a Form](#handling-user-input-with-a-form)
 
 ---
 
@@ -331,4 +332,9 @@
 - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md)
 
 ## Building a Simple Spring MVC Application
+- In this section, we created a basic Spring MVC application with JSP. We set up a `welcome.jsp` view to display a static message. The application uses `@Controller` and `@GetMapping` to render the welcome page.
+- [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)
+
+## Handling User Input with a Form
+- In this extended section, we added a form to the `welcome.jsp` page, allowing users to input their name. We then handled the form submission using a `POST` request and displayed a personalized greeting on a new page (`greeting.jsp`) using the user's name.
 - [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)

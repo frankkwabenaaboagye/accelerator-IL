@@ -73,9 +73,17 @@
     - Create a Spring MVC project to display a welcome message on the homepage ("/").
     - Develop a controller method with @RequestMapping("/") to handle GET requests.
     - Prepare a model with a message attribute and a view name (e.g., "welcome.jsp").
-    - Configure a view resolver to map the logical view name ("welcome") to a physical JSP file.
+    - Configure a view resolver to map the logical view name `("welcome")` to a physical JSP file.
+- Handling User Input with a Form:
+    - Extend the previous to create a form on the welcome page to capture a user's name.
+    - Implement a controller method with `@RequestMapping(value="/", method=RequestMethod.POST)` to handle form submissions (POST requests).
+    - Access form data using request parameters in the controller method.
+    - Update the model with the user's name and redirect to a new view (e.g., `"greeting.jsp"`) displaying a personalized greeting.
+
 - [Solution - ](./week2/README.md)
 
-## Lab: Building a Spring MVC Web Application with Database Integration
+## Building a Spring MVC Web Application with Database Integration
 
 - [Solution - ](./week2/README.md)
+
+
