@@ -16,6 +16,7 @@
 - [Hybrid Approach (Preferred)](#hybrid-approach-preferred)
 - [Building a Simple Spring MVC Application](#building-a-simple-spring-mvc-application)
 - [Handling User Input with a Form](#handling-user-input-with-a-form)
+- [Building a Spring MVC Web Application with Database Integration](#building-a-spring-mvc-web-application-with-database-integration)
 
 ---
 
@@ -338,3 +339,5 @@
 ## Handling User Input with a Form
 - In this extended section, we added a form to the `welcome.jsp` page, allowing users to input their name. We then handled the form submission using a `POST` request and displayed a personalized greeting on a new page (`greeting.jsp`) using the user's name.
 - [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)
+
+## Building a Spring MVC Web Application with Database Integration

@@ -83,7 +83,28 @@
 - [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Building a Spring MVC Web Application with Database Integration
-
+- Project Setup:
+    - Use Maven to create a new Spring MVC project.
+    - Include necessary Spring MVC dependencies in your pom.xml file (e.g., spring-webmvc, spring-jdbc).
+    - Configure a datasource bean in your application context (e.g., using a DataSource interface implementation) to connect to your chosen database.
+- Entity Model:
+    - Define a Java class representing a "ToDo Item" with attributes like id, title, and completed.
+    - Annotate this class with @Entity (from JPA) to mark it as a persistent entity that maps to a database table.
+- Data Access Layer (DAO):
+    - Create a DAO (Data Access Object) interface to define methods for CRUD (Create, Read, Update, Delete) operations on the ToDo items.
+    - Implement the DAO using JPA repositories. Spring Data JPA provides convenient implementations for basic CRUD operations.
+    - Inject the EntityManager bean (responsible for interacting with the database) into your DAO implementation.
+- Controller:
+    - Develop a Spring MVC controller class annotated with @Controller.
+    - Define controller methods for handling user interactions:
+        - `/todos`: List all available ToDo items (using the DAO to retrieve data).
+        - `/todo/add`: Handle form submissions for adding new ToDo items (use DAO to persist the new item).
+        - `/todo/complete/{id}`: Mark a specific ToDo item as complete by its ID (update the item in the database using DAO).
+- Views:
+    - Create JSP (or your preferred view technology) files for displaying the ToDo list and adding new items.
+    - Use Spring MVC expressions (e.g., ${todos}) to access model data (list of ToDo items) in your views.
+    - Utilize HTML forms for user input (adding new items) and submit them to appropriate controller methods.
+    
 - [Solution - ./week2/README.md](./week2/README.md)
 
 
