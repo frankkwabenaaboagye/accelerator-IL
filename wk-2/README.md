@@ -2,7 +2,7 @@
 - [Design Patterns: Mastering the Art of Reusable Object-Oriented Solutions](#design-patterns-mastering-the-art-of-reusable-object-oriented-solutions)
 - [Unit Testing vs. Integration Testing with Mockito](#unit-testing-vs-integration-testing-with-mockito)
 - [Integration Testing](#integration-testing)
-- Spring MVC: Building Flexible and Maintainable Web Applications
+- [Spring MVC: Building Flexible and Maintainable Web Applications](#spring-mvc-building-flexible-and-maintainable-web-applications)
 - Lab: Building a Spring MVC Web Application with Database Integration
 
 - [Solution - ./week2/README.md ](./week2/README.md)
@@ -69,5 +69,13 @@
 - [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Spring MVC: Building Flexible and Maintainable Web Applications
+- Building a Simple Spring MVC Application:
+    - Create a Spring MVC project to display a welcome message on the homepage ("/").
+    - Develop a controller method with @RequestMapping("/") to handle GET requests.
+    - Prepare a model with a message attribute and a view name (e.g., "welcome.jsp").
+    - Configure a view resolver to map the logical view name ("welcome") to a physical JSP file.
+- [Solution - ](./week2/README.md)
 
 ## Lab: Building a Spring MVC Web Application with Database Integration
+
+- [Solution - ](./week2/README.md)

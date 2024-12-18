@@ -14,6 +14,7 @@
 - [Top-Down Approach - Integration Testing](#top-down-approach---integration-testing)
 - [Bottom-Up Approach - Integration Testing](#bottom-up-approach---integration-testing)
 - [Hybrid Approach (Preferred)](#hybrid-approach-preferred)
+- [Building a Simple Spring MVC Application](#building-a-simple-spring-mvc-application)
 
 ---
 
@@ -328,3 +329,6 @@
 
 ## Hybrid Approach (Preferred)
 - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md)
+
+## Building a Simple Spring MVC Application
+- [Solution - ./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md](./src/main/java/frank/SpringMVC/WelcomeWithJSP/README.md)
