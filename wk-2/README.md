@@ -51,7 +51,14 @@
 
 ## Integration Testing
 - Common Integration Testing Strategies
-    - [Solution - ./week2/README.md ](./week2/README.md)
+    - Big Bang Approach (Less Preferred):
+        - Simulate a big bang approach by integrating a simple e-commerce application's frontend, backend logic, and database layer all at once. 
+        - Write basic integration tests to verify core functionalities like product browsing and order placement. 
+        - While this may uncover major issues quickly, pinpoint the root cause of failures can be difficult.
+    - Top-Down Approach:
+        - Design a scenario for a library management system. Start by testing high-level functionalities like searching for books and managing user accounts with stubs for lower-level modules like database access. 
+        - Gradually replace stubs with real database interactions as you move down the layers. This helps isolate errors in higher-level logic.
+- [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Spring MVC: Building Flexible and Maintainable Web Applications
 
