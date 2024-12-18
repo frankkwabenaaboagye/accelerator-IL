@@ -317,10 +317,13 @@
 - Controller Test: High-Level Test
   - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/controllers/](./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/controllers/)
 - Service Test: Mid-Level Test
-  - [Solution  - ](./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/services/)
+  - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/services/](./src/main/java/frank/CommonIntegrationTestingStrategies/TopDownApproach/LibraryManagementSystem/src/test/java/frank/librarymanagementsystem/services/)
 - Top-Level Tests: Begin by testing controllers using stubbed service layers.
 - Mid-Level Tests: Test the service layer with real database integration using H2 in-memory database.
 
 ## Bottom-Up Approach - Integration Testing
 - interactions between the `UserProfileService` and `NewsFeedService`
 - [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/BottomUpApproach/SocialMediaAppLab/src/test/java/frank/socialmediaapplab/](./src/main/java/frank/CommonIntegrationTestingStrategies/BottomUpApproach/SocialMediaAppLab/src/test/java/frank/socialmediaapplab/)
+
+## Hybrid Approach (Preferred)
+- [Solution - ./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md](./src/main/java/frank/CommonIntegrationTestingStrategies/HybridApproach/IMS/README.md)

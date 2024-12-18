@@ -51,13 +51,21 @@
 
 ## Integration Testing
 - Common Integration Testing Strategies
-    - Big Bang Approach (Less Preferred):
+    - `Big Bang Approach (Less Preferred)`:
         - Simulate a big bang approach by integrating a simple e-commerce application's frontend, backend logic, and database layer all at once. 
         - Write basic integration tests to verify core functionalities like product browsing and order placement. 
         - While this may uncover major issues quickly, pinpoint the root cause of failures can be difficult.
-    - Top-Down Approach:
+    - `Top-Down Approach`:
         - Design a scenario for a library management system. Start by testing high-level functionalities like searching for books and managing user accounts with stubs for lower-level modules like database access. 
         - Gradually replace stubs with real database interactions as you move down the layers. This helps isolate errors in higher-level logic.
+    - `Bottom-Up Approach`:
+        - Develop a social media application. Begin by creating unit tests for individual modules like user profile management and news feed retrieval. 
+        - Then, integrate these modules into a smaller group (e.g., profile management and user login) to test their interaction.
+        - Progressively build upon these successes to integrate larger groups of modules. This approach offers good control over individual components but may miss higher-level integration issues.
+    - `Hybrid Approach (Preferred)`:
+        - Combine the top-down and bottom-up approaches for an inventory management system.
+        - Test the high-level functionality of order processing with bottom-up assembled modules like product service and shopping cart, initially using stubs for external systems (e.g., payment gateway).
+        - Gradually replace stubs with real integrations as you gain confidence. This provides a balance between control and efficiency.
 - [Solution - ./week2/README.md ](./week2/README.md)
 
 ## Spring MVC: Building Flexible and Maintainable Web Applications
