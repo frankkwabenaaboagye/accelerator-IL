@@ -23,6 +23,8 @@
         - [https://spring.io/blog/2018/03/06/using-spring-security-5-to-integrate-with-oauth-2-secured-services-such-as-facebook-and-github](https://spring.io/blog/2018/03/06/using-spring-security-5-to-integrate-with-oauth-2-secured-services-such-as-facebook-and-github)
         - [https://jwt.io/](https://jwt.io/)
 
+    - Solution - [](./socialmedia/README.md)
+
 2. `Integrate OAuth2 with a Social Login Provider`
     - `Scenario`: You're developing an e-commerce application. Allow users to register and log in using their existing social media accounts (e.g., Google, Facebook).
     - `Tasks`:
