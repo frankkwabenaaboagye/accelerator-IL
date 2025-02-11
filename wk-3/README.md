@@ -69,6 +69,9 @@
         - [https://prometheus.io/](https://prometheus.io/)
         - [https://www.baeldung.com/spring-boot-self-hosted-monitoring](https://www.baeldung.com/spring-boot-self-hosted-monitoring)
 
+    - `Solution`
+        - [./actuator-demo/README.md](./actuator-demo/README.md)
+
 ## Part 3: Spring Cloud (Microservices Architecture)
 4. `Build a Microservice-based E-commerce Application`
     - `Scenario`: Develop an e-commerce application with separate microservices for user management, product catalog, and order processing.
