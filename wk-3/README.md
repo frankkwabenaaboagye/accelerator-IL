@@ -72,7 +72,7 @@
     - `Solution`
         - [./actuator-demo/README.md](./actuator-demo/README.md)
 
-## Part 3: Spring Cloud (Microservices Architecture)
+## Part 3: Spring Cloud (Microservices Architecture) && Part 4: Docker for Java Applications
 4. `Build a Microservice-based E-commerce Application`
     - `Scenario`: Develop an e-commerce application with separate microservices for user management, product catalog, and order processing.
     - `Tasks`:
@@ -96,7 +96,6 @@
         - [https://netflix.github.io/](https://netflix.github.io/)
 
 
-## Part 4: Docker for Java Applications
 5. `Containerize Your Microservices for Deployment`
     - `Scenario`: You want to deploy your e-commerce microservices in a scalable and portable manner.
     - `Tasks`:
