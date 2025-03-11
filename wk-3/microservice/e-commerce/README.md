@@ -34,7 +34,7 @@ Spring boot, Spring Cloud and Keycloak
 ```
 
 ## The main Dockerfile
-- [docker-compose.yml](/docker-compose.yml)
+- [docker-compose.yml](./docker-compose.yml)
 ```dockerfile
 docker compose up -d  # for detached mode
 docker compose down
