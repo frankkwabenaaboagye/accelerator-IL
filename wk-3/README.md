@@ -72,7 +72,7 @@
     - `Solution`
         - [./actuator-demo/README.md](./actuator-demo/README.md)
 
-## Part 3: Spring Cloud (Microservices Architecture) && Part 4: Docker for Java Applications
+## Part 3, 4,5: Spring Cloud (Microservices Architecture),  Docker for Java Applications
 4. `Build a Microservice-based E-commerce Application`
     - `Scenario`: Develop an e-commerce application with separate microservices for user management, product catalog, and order processing.
     - `Tasks`:
@@ -114,6 +114,8 @@
         - [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
         - [https://www.baeldung.com/dockerizing-spring-boot-application](https://www.baeldung.com/dockerizing-spring-boot-application)
 
+
+ - [Solution - ./microservice/e-commerce/README.md](./microservice/e-commerce/README.md)
 ---
 
 ### Considerations
