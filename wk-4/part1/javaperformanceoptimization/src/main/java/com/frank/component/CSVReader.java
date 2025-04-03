@@ -1,0 +1,32 @@
+package com.frank.component;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+
+import com.frank.utils.LoggerSingleton;
+
+public class CSVReader {
+
+    public List<String[]> readCSV(String filePath){
+        List<String[]> records = new ArrayList<>();
+
+        try(BufferedReader br = Files.newBufferedReader(Paths.get(filePath))){
+            String line;
+            while((line = br.readLine()) != null){
+                records.add(line.split(","));
+            }
+        }catch(IOException e){
+            LoggerSingleton
+                .getLogger()
+                .log(Level.SEVERE, () -> String.format("Error reading the CSV file: %s", e.getMessage()));
+        }
+
+        return records;
+    }
+
+}

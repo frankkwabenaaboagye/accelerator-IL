@@ -1,0 +1,59 @@
+
+# VS Code
+.vscode/
+*.code-workspace
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Spring Boot
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+*.log
+spring-test/
+spring-*/
+.spring-*/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.ctxt
+.mtj.tmp/
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+./wk-4/part1/javaperformanceoptimization/target/** 
+wk-4/part1/javaperformanceoptimization/target/** 
