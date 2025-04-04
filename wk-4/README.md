@@ -31,3 +31,16 @@
     
 - Solution
     - [./part1/README.md](./part1/README.md)
+
+
+# Part 3: Testing Frameworks (JUnit & Selenium)
+- Task
+    1. Set up JUnit in your Java project for unit testing.
+    2. Write unit tests for your chosen application (e.g., test individual methods or
+    functionalities).
+    3. Explore Selenium for web UI automation.
+    4. Write Selenium tests to automate basic interactions with a web application
+    (optional).
+
+- Solutions
+    - []()
