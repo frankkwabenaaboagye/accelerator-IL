@@ -1,4 +1,4 @@
-# Part - 1: Java Performance Optimization
+# Part - 1 & Part 2: Java Performance Optimization & Memory Management & Garbage Collection
 - Summary:
 
     This section focuses on techniques to identify and improve the performance of your
@@ -22,6 +22,12 @@
     2. Use a profiling tool to identify performance bottlenecks in your application.
     3. Implement performance optimization techniques based on profiling results.
     4. Re-run the profile and measure the performance improvements achieved.
+- Task:
+    1. Review the basics of Java memory management and garbage collection.
+    2. Analyze common scenarios that can lead to memory leaks in Java applications.
+    3. Explore tools like VisualVM for monitoring memory usage and GC activity.
+    4. Implement techniques to avoid memory leaks in your Java code (e.g., closing
+    resources properly).
     
 - Solution
     - [./part1/README.md](./part1/README.md)

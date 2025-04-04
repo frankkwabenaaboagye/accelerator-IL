@@ -74,23 +74,79 @@
             - `cons`
                 - commerical product
 
+- bootle neck identified
+    - the data processing component [DataProcessor.java](./javaperformanceoptimization/src/main/java/com/frank/component/DataProcessor.java)
+    - the reading of the csv data [CSVReader.java](./javaperformanceoptimization/src/main/java/com/frank/component/CSVReader.java)
 
 - Sample Short
-    - ![](./images/first.png)
-    - ![](./images/second.png)
+    - ![](./images/short-1.png)
+    - ![](./images/short-2.png)
 
-
-
-- Bottleneck identified
-    - reading of the CSV file
+- code that was changed / optimized
 
 ```java
 
-// first
+// for the first snapshot
 
 
-// second
+public List<String[]> readCSV(String filePath){
+    List<String[]> records = new ArrayList<>();
+
+    try(BufferedReader br = Files.newBufferedReader(Paths.get(filePath))){
+        String line;
+        while((line = br.readLine()) != null){
+            records.add(line.split(","));
+        }
+    }catch(IOException e){
+        LoggerSingleton
+            .getLogger()
+            .log(Level.SEVERE, () -> String.format("Error reading the CSV file: %s", e.getMessage()));
+    }
+    return records;
+}
 
 
+public Map<String, Integer> process(List<String[]> records) {
+    Map<String, Integer> artistPlayCount = new HashMap<>();
+    for (String[] rec: records) {
+        if (rec.length < 2) continue;
+        String artistName = rec[5];
+        artistPlayCount.put(artistName, artistPlayCount.getOrDefault(artistName, 0) + 1);
+    }
+    return artistPlayCount;
+}
+
+// for the second snapshot
+
+public List<String[]> readCSV(String filePath) {
+    try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
+        return br.lines()
+                .map(line -> line.split(",", -1)) // Handle missing values properly
+                .collect(Collectors.toList());
+    } catch (IOException e) {
+        LoggerSingleton.getLogger().log(Level.SEVERE,
+                () -> String.format("Error reading the CSV file: %s", e.getMessage()));
+        return Collections.emptyList(); // Return empty list instead of null
+    }
+}
+
+public Map<String, Integer> process(List<String[]> records) {
+    Map<String, Integer> artistPlayCount = new HashMap<>();
+    for (String[] rec : records) {
+        if (rec.length < 6) { // Ensure at least 6 columns before accessing index 5
+            LoggerSingleton.getLogger().warning("Skipping invalid row: " + Arrays.toString(rec));
+            continue;
+        }
+        String artistName = rec[5];
+        artistPlayCount.merge(artistName, 1, Integer::sum);
+    }
+    return artistPlayCount;
+}
 
 ```
+
+- for the memory
+    - Current Optimizations in the code
+        - Using `BufferedReader` instead of FileReader
+
+

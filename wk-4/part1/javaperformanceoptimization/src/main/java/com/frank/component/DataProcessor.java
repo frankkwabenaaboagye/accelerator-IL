@@ -48,32 +48,32 @@ public class DataProcessor {
         }
     }
 
-//    public Map<String, Integer> proces_first(List<String[]> records) {
-//        Map<String, Integer> artistPlayCount = new HashMap<>();
-//        for (String[] rec: records) {
-//            if (rec.length < 2) continue;
-//            String artistName = rec[5];
-//            artistPlayCount.put(artistName, artistPlayCount.getOrDefault(artistName, 0) + 1);
-//
-//        }
-//        return artistPlayCount;
-//
-//    }
-
     public Map<String, Integer> process(List<String[]> records) {
         Map<String, Integer> artistPlayCount = new HashMap<>();
-
-        for (String[] rec : records) {
-            if (rec.length < 6) { // Ensure at least 6 columns before accessing index 5
-                LoggerSingleton.getLogger().warning("Skipping invalid row: " + Arrays.toString(rec));
-                continue;
-            }
-
+        for (String[] rec: records) {
+            if (rec.length < 2) continue;
             String artistName = rec[5];
-            artistPlayCount.merge(artistName, 1, Integer::sum);
-        }
+            artistPlayCount.put(artistName, artistPlayCount.getOrDefault(artistName, 0) + 1);
 
+        }
         return artistPlayCount;
+
     }
+
+//    public Map<String, Integer> process(List<String[]> records) {
+//        Map<String, Integer> artistPlayCount = new HashMap<>();
+//
+//        for (String[] rec : records) {
+//            if (rec.length < 6) { // Ensure at least 6 columns before accessing index 5
+//                LoggerSingleton.getLogger().warning("Skipping invalid row: " + Arrays.toString(rec));
+//                continue;
+//            }
+//
+//            String artistName = rec[5];
+//            artistPlayCount.merge(artistName, 1, Integer::sum);
+//        }
+//
+//        return artistPlayCount;
+//    }
 
 }
