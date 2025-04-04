@@ -8,7 +8,7 @@ public class Main {
         SpotifyDataProcessor spotifyDataProcessor = new SpotifyDataProcessor();
     
         Logger logger = LoggerSingleton.getLogger();
-        logger.info("running the data processng app!");
+        logger.info("running the data processing app!");
         
         long startTime = System.nanoTime();
 

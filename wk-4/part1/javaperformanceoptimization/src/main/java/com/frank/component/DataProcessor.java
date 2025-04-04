@@ -1,9 +1,6 @@
 package com.frank.component;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Logger;
 
 import com.frank.utils.LoggerSingleton;
@@ -51,16 +48,32 @@ public class DataProcessor {
         }
     }
 
+//    public Map<String, Integer> proces_first(List<String[]> records) {
+//        Map<String, Integer> artistPlayCount = new HashMap<>();
+//        for (String[] rec: records) {
+//            if (rec.length < 2) continue;
+//            String artistName = rec[5];
+//            artistPlayCount.put(artistName, artistPlayCount.getOrDefault(artistName, 0) + 1);
+//
+//        }
+//        return artistPlayCount;
+//
+//    }
+
     public Map<String, Integer> process(List<String[]> records) {
         Map<String, Integer> artistPlayCount = new HashMap<>();
-        for (String[] rec: records) {
-            if (rec.length < 2) continue;
+
+        for (String[] rec : records) {
+            if (rec.length < 6) { // Ensure at least 6 columns before accessing index 5
+                LoggerSingleton.getLogger().warning("Skipping invalid row: " + Arrays.toString(rec));
+                continue;
+            }
+
             String artistName = rec[5];
-            artistPlayCount.put(artistName, artistPlayCount.getOrDefault(artistName, 0) + 1);
-
+            artistPlayCount.merge(artistName, 1, Integer::sum);
         }
-        return artistPlayCount;
 
+        return artistPlayCount;
     }
 
 }
