@@ -18,9 +18,6 @@ Each link below will take you to the corresponding week's content and resources.
 - [Week 4: Java Performance, Testing, and CI/CD ](./wk-4/README.md)
     - Java Performance Optimization , Memory Management , Garbage Collection , Testing Frameworks (e.g., JUnit, Selenium) , Continuous Integration and Continuous Delivery (CI/CD) with Jenkins
 
-- [Week 5: Aspect-Oriented Programming Unveiled](./wk-5/README.md)
-    - Aspect-Oriented Programming
-
 
 
 ---
