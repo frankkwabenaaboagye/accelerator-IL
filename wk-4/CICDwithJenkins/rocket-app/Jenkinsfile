@@ -25,6 +25,9 @@ pipeline {
 				//sh './mvnw clean package'
 				sh '''
                 ls
+                cd wk-4/CICDwithJenkins/rocket-app
+                echo "changed directory "
+               	ls
                 echo "DONE WITH THE BUILD"
                 '''
             }
