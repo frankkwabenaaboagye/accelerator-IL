@@ -44,3 +44,16 @@
 
 - Solutions
     - [./TestingFrameworks/README.md](./TestingFrameworks/README.md)
+
+
+# Part 4: CI/CD with Jenkins
+- Task
+    1. Set up a Jenkins server (local or cloud-based).
+    2. Create a CI/CD pipeline in Jenkins for your Java application.
+    3. Integrate your code repository (e.g., Git) with Jenkins for automatic builds upon
+    code changes.
+    4. Configure Jenkins jobs for building, testing (using JUnit), and optionally deploying
+    your application.
+
+- Solution
+    - [./]
