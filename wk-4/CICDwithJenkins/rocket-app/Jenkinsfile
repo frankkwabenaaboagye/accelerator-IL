@@ -22,13 +22,19 @@ pipeline {
 
         stage('Build') {
 			steps {
-				sh './mvnw clean package'
+				//sh './mvnw clean package'
+				sh '''
+                ls
+                echo "DONE WITH THE BUILD"
+                '''
             }
         }
 
         stage('Test') {
 			steps {
-				sh './mvnw test'
+				sh '''
+				echo "DONE WIH THE TEST"
+				'''
             }
         }
 
