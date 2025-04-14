@@ -135,4 +135,4 @@ and collaborate with other developers. This can significantly enhance your
 learning journey.
 4. Stay updated with the latest trends and advancements in the Spring Boot
 ecosystem by following Spring's official channels, blogs, and community
-discussions.
+discussions
