@@ -149,4 +149,97 @@ public Map<String, Integer> process(List<String[]> records) {
     - Current Optimizations in the code
         - Using `BufferedReader` instead of FileReader
 
+###  Memory Management && GC
 
+```text
+
+JVM Memory:
+ ┌───────────────────┐
+ │   Metaspace       │ <-- Class metadata
+ │ ───────────────── │
+ │       Heap        │ <-- Objects live here (GC focus)
+ │ ───────────────── │
+ │      Stack        │ <-- Local vars, method calls
+ │ ───────────────── │
+ │    Code Cache     │ <-- Compiled bytecode
+ └───────────────────┘
+
+```
+
+- GC
+    - "When no one points to your object → it's trash → GC throws it away."
+
+- Examples of Unreferenced Objects
+
+```java
+// Example 1 - Simple reassignment
+
+public class Example1 {
+    public static void main(String[] args) {
+        String name = new String("Frank");  // Reference created
+
+        name = new String("John");  // "Frank" is now unreferenced
+
+        // GC may clean up "Frank" if no other references exist
+    }
+}
+
+```
+
+```java
+// Example 2 - Setting to null
+
+public class Example2 {
+    public static void main(String[] args) {
+        StringBuilder builder = new StringBuilder("Hello World");
+
+        builder = null;  // Object is now unreferenced
+    }
+}
+```
+
+```java
+// Example 3 - Method scope
+public class Example3 {
+    public static void main(String[] args) {
+        createObject();
+
+        // After method returns, object inside createObject() is unreferenced
+    }
+
+    static void createObject() {
+        Integer number = new Integer(100);
+        // number exists only within this method scope
+    }
+}
+
+```
+
+```java
+// Example 4 - Objects removed from a collection
+
+public class Example4 {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+
+        names.remove("Alice"); // "Alice" is now unreferenced
+    }
+}
+```
+
+```java
+// Example 5 - Overwriting array elements
+
+public class Example5 {
+    public static void main(String[] args) {
+        String[] arr = new String[3];
+        arr[0] = "First";
+        arr[1] = "Second";
+
+        arr[1] = "New Second";  // "Second" is unreferenced now
+    }
+}
+
+```
